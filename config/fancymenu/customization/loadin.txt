@@ -1,0 +1,60 @@
+type = menu
+
+customization-meta {
+  identifier = de.keksuccino.drippyloadingscreen.customization.DrippyOverlayScreen
+  randomgroup = 1
+  renderorder = foreground
+  randommode = false
+  randomonlyfirsttime = false
+}
+
+customization {
+  keepaspectratio = false
+  action = backgroundoptions
+}
+
+customization {
+  orientation = top-left
+  hidden = true
+  x = 228
+  width = 504
+  action = deep_customization_element:drippy_overlay_logo
+  actionid = 84dcc7ae-198f-498c-9e95-a2bc8b80ecf41679525058555
+  y = 189
+  height = 126
+}
+
+customization {
+  custom_color_hex = #2c1430
+  orientation = top-left
+  hidden = false
+  x = -1000000
+  width = 0
+  action = deep_customization_element:drippy_overlay_background
+  actionid = 6d2d32b4-5146-405c-bca8-57ea3f2231191679525058584
+  y = -1000000
+  height = 0
+}
+
+customization {
+  orientation = top-left
+  hidden = false
+  x = 228
+  width = 504
+  action = deep_customization_element:drippy_overlay_progress_bar
+  actionid = b67fb59d-aafc-475d-a70f-a507ba1d5be11679525058585
+  y = 414
+  height = 10
+}
+
+customization {
+  path = kubejs/assets/kubejs/textures/images/logo.png
+  orientation = mid-centered
+  x = -283
+  width = 567
+  action = addtexture
+  actionid = 747914f5-1854-4385-b4e1-d18560fcc6bd1679525097162
+  y = -160
+  height = 320
+}
+
