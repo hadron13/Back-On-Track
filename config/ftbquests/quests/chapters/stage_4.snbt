@@ -1,0 +1,782 @@
+{
+	id: "2FDA7DFC0C684E58"
+	group: "6F42926B3F0C534A"
+	order_index: 4
+	filename: "stage_4"
+	title: "&f4&r Power Processing"
+	icon: "kubejs:power_mechanism"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	images: [
+		{
+			x: -5.5d
+			y: 3.5d
+			width: 2.0d
+			height: 2.0d
+			rotation: 0.0d
+			image: "createdeco:textures/block/palettes/decal/yellow_decal.png"
+			hover: ["High Voltage"]
+			click: ""
+			dev: false
+			corner: false
+		}
+		{
+			x: -3.5d
+			y: 3.5d
+			width: 2.0d
+			height: 2.0d
+			rotation: 0.0d
+			image: "createdeco:textures/block/palettes/decal/black_decal.png"
+			hover: ["Potential Harm"]
+			click: ""
+			dev: false
+			corner: false
+		}
+		{
+			x: 1.5d
+			y: 10.5d
+			width: 2.0d
+			height: 2.0d
+			rotation: 0.0d
+			image: "createdeco:textures/block/palettes/decal/blue_decal.png"
+			hover: ["Oil Prices"]
+			click: "https://oilprice.com/"
+			dev: false
+			corner: false
+		}
+	]
+	quests: [
+		{
+			title: "Zappin' Start"
+			icon: "kubejs:explosive_mechanism"
+			x: 0.0d
+			y: 3.5d
+			shape: "hexagon"
+			description: ["The desh found in the moon has interesting and useful chemical properties that will propel the factory into a new age of technology."]
+			size: 2.0d
+			id: "6C3258881A44FA46"
+			tasks: [{
+				id: "7EDB86424742184C"
+				type: "checkmark"
+			}]
+		}
+		{
+			title: "Plastically"
+			icon: "kubejs:plastic"
+			x: 2.0d
+			y: 3.5d
+			description: [
+				"Plastic is the main resource used in the new assembly lines."
+				""
+				"It's production requires the new discovered desh as a catalyst and a lot of oil, with a ratio of 1 bucket of oil for 2 white bricks."
+				""
+				"The oil deposits may be enough for now, but in the future renewable ways of producing it will be required."
+			]
+			dependencies: ["6C3258881A44FA46"]
+			id: "49DBAD39FC47605C"
+			tasks: [{
+				id: "0DA92CA9A123AD5D"
+				type: "checkmark"
+				title: "Aknowleged"
+			}]
+		}
+		{
+			title: "Chapter 4 Complete!"
+			icon: "thermal:machine_frame"
+			x: -0.5d
+			y: 28.5d
+			shape: "hexagon"
+			dependencies: ["3E67BA828E888EC5"]
+			hide: true
+			size: 3.0d
+			id: "4E549678E05D7FA8"
+			tasks: [
+				{
+					id: "01DFDF7C34AE8BC2"
+					type: "checkmark"
+					title: "Automated"
+				}
+				{
+					id: "16ECBFD01F1B11DD"
+					type: "item"
+					item: "thermal:machine_frame"
+					consume_items: false
+				}
+			]
+		}
+		{
+			title: "Analog Circuitry"
+			icon: "kubejs:power_mechanism"
+			x: -0.5d
+			y: 25.0d
+			shape: "hexagon"
+			description: ["All the components come together to assemble this little circuit that will change factories forever."]
+			dependencies: [
+				"267AC35073FE7625"
+				"60F0720F73377A77"
+				"5CA2D037B2C347F0"
+				"2EF681F09CC6F018"
+				"38636C9D66CD6C2B"
+				"3751C84A7C46F526"
+				"6DDCD9F86C6403EE"
+			]
+			size: 2.0d
+			id: "3E67BA828E888EC5"
+			tasks: [
+				{
+					id: "681B767EBFC1C30B"
+					type: "item"
+					item: "kubejs:power_mechanism"
+					consume_items: false
+				}
+				{
+					id: "69F7ADBE17EFCA43"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			title: "Tinning"
+			x: -2.5d
+			y: 26.0d
+			shape: "diamond"
+			hide_dependency_lines: true
+			dependencies: [
+				"38636C9D66CD6C2B"
+				"2EF681F09CC6F018"
+				"3751C84A7C46F526"
+				"6DDCD9F86C6403EE"
+			]
+			size: 1.5d
+			id: "267AC35073FE7625"
+			tasks: [{
+				id: "1FC52C465778AACF"
+				type: "item"
+				item: {
+					id: "kubejs:soldering_iron"
+					Count: 1b
+					tag: {
+						Damage: 0
+					}
+				}
+			}]
+		}
+		{
+			title: "Because Aesthetics Matter"
+			x: -5.5d
+			y: 23.5d
+			dependencies: [
+				"5BA9A5897DF9A0DC"
+				"04112A42844CFCBA"
+			]
+			id: "60F0720F73377A77"
+			tasks: [{
+				id: "47390586E915CD32"
+				type: "item"
+				item: "create_enchantment_industry:ink_bucket"
+			}]
+		}
+		{
+			x: -2.25d
+			y: 22.5d
+			shape: "hexagon"
+			dependencies: [
+				"046FCC0FCD23541A"
+				"04112A42844CFCBA"
+			]
+			size: 1.5d
+			id: "6DDCD9F86C6403EE"
+			tasks: [{
+				id: "286739B83062AB29"
+				type: "item"
+				item: "kubejs:resistor"
+			}]
+		}
+		{
+			x: -4.5d
+			y: 21.75d
+			shape: "hexagon"
+			dependencies: [
+				"2F398951CEDAB634"
+				"04112A42844CFCBA"
+			]
+			size: 1.5d
+			id: "38636C9D66CD6C2B"
+			tasks: [{
+				id: "62B6C667596C46E6"
+				type: "item"
+				item: "kubejs:ceramic_capacitor"
+				consume_items: false
+			}]
+		}
+		{
+			x: 1.5d
+			y: 22.5d
+			shape: "hexagon"
+			dependencies: [
+				"50188438D261093B"
+				"04112A42844CFCBA"
+			]
+			size: 1.5d
+			id: "2EF681F09CC6F018"
+			tasks: [{
+				id: "5D5E425BADF708A1"
+				type: "item"
+				item: "kubejs:electrolytic_capacitor"
+			}]
+		}
+		{
+			x: 3.75d
+			y: 21.75d
+			shape: "hexagon"
+			dependencies: [
+				"2B0304738F2A4C16"
+				"04112A42844CFCBA"
+			]
+			size: 1.5d
+			id: "3751C84A7C46F526"
+			tasks: [{
+				id: "78AFA610FC3D1688"
+				type: "item"
+				item: "kubejs:inductor"
+				consume_items: false
+			}]
+		}
+		{
+			x: 1.5d
+			y: 25.0d
+			id: "5CA2D037B2C347F0"
+			tasks: [{
+				id: "24F69169E571E563"
+				type: "item"
+				item: "kubejs:plastic_bucket"
+			}]
+		}
+		{
+			x: -7.5d
+			y: 22.0d
+			dependencies: ["7D09973E3AB2B2DE"]
+			id: "5BA9A5897DF9A0DC"
+			tasks: [{
+				id: "3E99ADE1A15CC17E"
+				type: "item"
+				item: "minecraft:black_dye"
+			}]
+		}
+		{
+			x: 3.5d
+			y: 19.5d
+			description: ["The molten plastic can be solidified turning into this expensive brick, in the end you need 500 mb of oil for every plastic 'brick'"]
+			dependencies: ["23571A83FC576E93"]
+			id: "7066CD777C674157"
+			tasks: [{
+				id: "2CC551CDAF1FE6C8"
+				type: "item"
+				item: "kubejs:plastic"
+			}]
+		}
+		{
+			x: 4.0d
+			y: 16.0d
+			dependencies: ["142E0EF93A24D521"]
+			id: "7E6A1AA3B3EE178C"
+			tasks: [{
+				id: "413935F27A91026F"
+				type: "item"
+				item: "createaddition:copper_wire"
+			}]
+		}
+		{
+			x: 6.0d
+			y: 20.0d
+			dependencies: [
+				"7066CD777C674157"
+				"7E6A1AA3B3EE178C"
+				"071D0C66B23FC5EB"
+			]
+			id: "2B0304738F2A4C16"
+			tasks: [{
+				id: "65BCC889F00AF1FF"
+				type: "item"
+				item: "kubejs:dirt_inductor"
+				consume_items: false
+			}]
+		}
+		{
+			x: 1.5d
+			y: 20.0d
+			dependencies: [
+				"7066CD777C674157"
+				"5F7C4954686B24EA"
+				"189E8879A8C715B4"
+				"383C40A422A5D37D"
+			]
+			id: "50188438D261093B"
+			tasks: [{
+				id: "201FA0EF7BCA5964"
+				type: "item"
+				item: "kubejs:dirt_electrolytic_capacitor"
+				consume_items: false
+			}]
+		}
+		{
+			x: -6.0d
+			y: 20.5d
+			dependencies: [
+				"1489C94E0BF5BA6E"
+				"0837CD556CA25406"
+				"383C40A422A5D37D"
+			]
+			id: "2F398951CEDAB634"
+			tasks: [{
+				id: "3F9F8541EB8035A5"
+				type: "item"
+				item: "kubejs:dirt_ceramic_capacitor"
+				consume_items: false
+			}]
+		}
+		{
+			x: -2.5d
+			y: 17.5d
+			dependencies: [
+				"7B5D62CE4E54CB50"
+				"2B460616C8CCE221"
+				"7066CD777C674157"
+				"383C40A422A5D37D"
+				"7BBDC290473AA1A2"
+			]
+			id: "046FCC0FCD23541A"
+			tasks: [{
+				id: "740C8EB938F787EE"
+				type: "item"
+				item: "kubejs:dirt_resistor"
+				consume_items: false
+			}]
+		}
+		{
+			x: -0.5d
+			y: 20.5d
+			shape: "rsquare"
+			id: "04112A42844CFCBA"
+			tasks: [{
+				id: "19DCAB297BC166A2"
+				type: "item"
+				item: "minecraft:water_bucket"
+			}]
+		}
+		{
+			x: 3.5d
+			y: 14.5d
+			description: ["Desh going into heavy oil will do some weird polymerization and turn it into plastic, sorry pretrochemists, but i can't add the full periodic table here."]
+			dependencies: [
+				"1F4A3F946FFCC28B"
+				"4B9B8FA07372EA56"
+			]
+			id: "23571A83FC576E93"
+			tasks: [{
+				id: "7399C2DC18FC88A6"
+				type: "item"
+				item: "kubejs:plastic_bucket"
+			}]
+		}
+		{
+			x: 5.5d
+			y: 12.5d
+			dependencies: ["1EC3D1BF537B4CA5"]
+			id: "4B9B8FA07372EA56"
+			tasks: [{
+				id: "3CD624EA6B73469C"
+				type: "item"
+				item: "beyond_earth:desh_ingot"
+			}]
+		}
+		{
+			x: -0.5d
+			y: 14.5d
+			dependencies: ["6902E111878B17A8"]
+			id: "7A1549D9CE87FDE5"
+			tasks: [{
+				id: "7CD1E2ED83F45D3F"
+				type: "item"
+				item: "minecraft:copper_ingot"
+			}]
+		}
+		{
+			x: -9.0d
+			y: 18.5d
+			dependencies: ["53C9E21501A76C31"]
+			id: "1489C94E0BF5BA6E"
+			tasks: [{
+				id: "3F6E2C12A2885609"
+				type: "item"
+				item: "kubejs:mica_sheet"
+			}]
+		}
+		{
+			x: 3.5d
+			y: 12.0d
+			dependencies: ["414178CF8BF7AE36"]
+			id: "1F4A3F946FFCC28B"
+			tasks: [{
+				id: "0ED6BE959924BEF5"
+				type: "item"
+				item: "thermal:heavy_oil_bucket"
+			}]
+		}
+		{
+			x: 3.5d
+			y: 10.0d
+			id: "414178CF8BF7AE36"
+			tasks: [{
+				id: "3E05587A1318C971"
+				type: "item"
+				item: "kubejs:crude_oil_bucket"
+			}]
+		}
+		{
+			x: -9.5d
+			y: 15.5d
+			dependencies: ["6FBDF501A3851D69"]
+			id: "53C9E21501A76C31"
+			tasks: [{
+				id: "44F2C26A77889CC7"
+				type: "item"
+				item: "kubejs:mica_block"
+			}]
+		}
+		{
+			x: -9.5d
+			y: 12.5d
+			id: "6FBDF501A3851D69"
+			tasks: [{
+				id: "7FF4660A77A1F551"
+				type: "item"
+				item: "beyond_earth:desh_block"
+			}]
+		}
+		{
+			x: -6.5d
+			y: 18.5d
+			dependencies: ["6C2B7197A81F87AD"]
+			id: "0837CD556CA25406"
+			tasks: [{
+				id: "105E18E8F5C77174"
+				type: "item"
+				item: "kubejs:ceramic_powder"
+			}]
+		}
+		{
+			x: -7.0d
+			y: 15.5d
+			dependencies: ["7BBDC290473AA1A2"]
+			id: "6C2B7197A81F87AD"
+			tasks: [{
+				id: "565CE26B88BF6718"
+				type: "item"
+				item: "minecraft:brick"
+			}]
+		}
+		{
+			x: -6.0d
+			y: 10.5d
+			dependencies: ["0A3BD547D0553A92"]
+			id: "7BBDC290473AA1A2"
+			tasks: [{
+				id: "45694CD7F3DAA9E3"
+				type: "item"
+				item: "minecraft:clay_ball"
+			}]
+		}
+		{
+			x: -4.0d
+			y: 8.0d
+			dependencies: ["32C5454B484AA8ED"]
+			id: "0A3BD547D0553A92"
+			tasks: [{
+				id: "5844247987438745"
+				type: "item"
+				item: "minecraft:sand"
+			}]
+		}
+		{
+			x: 5.5d
+			y: 11.0d
+			id: "1EC3D1BF537B4CA5"
+			tasks: [{
+				id: "7EDEDA8684CAD3EC"
+				type: "item"
+				item: "beyond_earth:raw_desh"
+			}]
+		}
+		{
+			x: -3.5d
+			y: 10.5d
+			dependencies: ["7BBDC290473AA1A2"]
+			id: "7D53DAD4F18FE8E7"
+			tasks: [{
+				id: "48B07554429647DD"
+				type: "item"
+				item: "minecraft:clay"
+			}]
+		}
+		{
+			x: -1.5d
+			y: 11.0d
+			dependencies: ["7D53DAD4F18FE8E7"]
+			id: "3BC56849344CE76B"
+			tasks: [{
+				id: "335BCBEF97AE22F1"
+				type: "item"
+				item: "minecraft:dripstone_block"
+				consume_items: false
+			}]
+		}
+		{
+			x: -1.0d
+			y: 7.0d
+			dependencies: ["250B90B8E287A25B"]
+			id: "32C5454B484AA8ED"
+			tasks: [{
+				id: "2E65C4E82AD722BC"
+				type: "item"
+				item: "minecraft:gravel"
+			}]
+		}
+		{
+			x: -0.5d
+			y: 5.0d
+			id: "250B90B8E287A25B"
+			tasks: [{
+				id: "5ADD38F68ADA8FD2"
+				type: "item"
+				item: "minecraft:cobblestone"
+			}]
+		}
+		{
+			x: 7.0d
+			y: 12.5d
+			dependencies: [
+				"03D5A6DBBBC27B1B"
+				"4960207A06C7E636"
+			]
+			id: "071D0C66B23FC5EB"
+			tasks: [{
+				id: "1CAA97F9A7FF3B55"
+				type: "item"
+				item: "kubejs:inductor_core"
+			}]
+		}
+		{
+			x: 6.0d
+			y: 9.5d
+			dependencies: ["68C4FF689EBA2277"]
+			id: "03D5A6DBBBC27B1B"
+			tasks: [{
+				id: "070340E14E7E403E"
+				type: "item"
+				item: "createbigcannons:cast_iron_ingot"
+			}]
+		}
+		{
+			x: 2.0d
+			y: 7.5d
+			dependencies: ["32C5454B484AA8ED"]
+			id: "16B4940D98046D38"
+			tasks: [{
+				id: "39A6D97FC5F9E0A3"
+				type: "item"
+				item: "minecraft:iron_nugget"
+			}]
+		}
+		{
+			x: 4.5d
+			y: 8.5d
+			dependencies: ["16B4940D98046D38"]
+			id: "68C4FF689EBA2277"
+			tasks: [{
+				id: "06063058D7D18CC4"
+				type: "item"
+				item: "minecraft:iron_ingot"
+			}]
+		}
+		{
+			x: -3.5d
+			y: 14.0d
+			dependencies: ["7D09973E3AB2B2DE"]
+			id: "7B5D62CE4E54CB50"
+			tasks: [{
+				id: "5791852A767F6C25"
+				type: "item"
+				item: "kubejs:carbon_sheet"
+			}]
+		}
+		{
+			x: -8.0d
+			y: 11.0d
+			dependencies: ["70D46D1CB695DDF3"]
+			id: "7D09973E3AB2B2DE"
+			tasks: [{
+				id: "6F30F171DF947C6E"
+				type: "item"
+				item: "minecraft:charcoal"
+			}]
+		}
+		{
+			x: -4.5d
+			y: 17.5d
+			shape: "diamond"
+			size: 1.5d
+			id: "2B460616C8CCE221"
+			tasks: [{
+				id: "7F835FEF7C05CA56"
+				type: "item"
+				item: "thermal:drill_head"
+			}]
+		}
+		{
+			x: -0.5d
+			y: 12.0d
+			dependencies: ["3BC56849344CE76B"]
+			id: "6902E111878B17A8"
+			tasks: [{
+				id: "108F4F07D6E2DC8B"
+				type: "item"
+				item: "create:copper_nugget"
+				consume_items: false
+			}]
+		}
+		{
+			x: 8.0d
+			y: 14.5d
+			id: "6279E77C6C53293D"
+			tasks: [{
+				id: "62712C7338ABDEC0"
+				type: "item"
+				item: "minecraft:water_bucket"
+			}]
+		}
+		{
+			x: -7.5d
+			y: 6.5d
+			id: "70D46D1CB695DDF3"
+			tasks: [{
+				id: "0F518361832ED26E"
+				type: "item"
+				item: "minecraft:oak_log"
+			}]
+		}
+		{
+			x: -0.5d
+			y: 18.5d
+			dependencies: ["7A1549D9CE87FDE5"]
+			id: "383C40A422A5D37D"
+			tasks: [{
+				id: "55038E025F33BC27"
+				type: "item"
+				item: "createaddition:copper_rod"
+			}]
+		}
+		{
+			x: 1.5d
+			y: 17.5d
+			dependencies: ["6C6C85FD99CFA3E2"]
+			id: "5F7C4954686B24EA"
+			tasks: [{
+				id: "15CF8682228F6B13"
+				type: "item"
+				item: "kubejs:rough_sheet"
+			}]
+		}
+		{
+			x: 2.0d
+			y: 15.5d
+			dependencies: [
+				"142E0EF93A24D521"
+				"189E8879A8C715B4"
+			]
+			id: "6C6C85FD99CFA3E2"
+			tasks: [{
+				id: "2C4DCC3B666A228C"
+				type: "item"
+				item: "kubejs:soaked_sheet"
+			}]
+		}
+		{
+			x: 1.5d
+			y: 14.0d
+			dependencies: ["7A1549D9CE87FDE5"]
+			id: "142E0EF93A24D521"
+			tasks: [{
+				id: "5E66A6733C8A9889"
+				type: "item"
+				item: "create:copper_sheet"
+			}]
+		}
+		{
+			x: 4.5d
+			y: 16.5d
+			dependencies: [
+				"6279E77C6C53293D"
+				"6879A856FBA694A6"
+				"4B9B8FA07372EA56"
+			]
+			id: "189E8879A8C715B4"
+			tasks: [{
+				id: "1FD5DD946F954048"
+				type: "item"
+				item: "kubejs:electrolyte_bucket"
+			}]
+		}
+		{
+			x: 11.5d
+			y: 13.0d
+			dependencies: [
+				"26094FBF2474FFAF"
+				"6279E77C6C53293D"
+			]
+			id: "00AC83284EED49F3"
+			tasks: [{
+				id: "7C5FCB661AD0E9E0"
+				type: "item"
+				item: "thermal:sulfur"
+				consume_items: false
+			}]
+		}
+		{
+			x: 11.5d
+			y: 6.5d
+			id: "26094FBF2474FFAF"
+			tasks: [{
+				id: "2727136274B971C9"
+				type: "item"
+				item: "minecraft:lava_bucket"
+			}]
+		}
+		{
+			x: 10.5d
+			y: 17.5d
+			dependencies: ["00AC83284EED49F3"]
+			id: "6879A856FBA694A6"
+			tasks: [{
+				id: "301ADBEE5DA8C160"
+				type: "item"
+				item: "thermal:sulfur_dust"
+			}]
+		}
+		{
+			title: "Inducing: Teslas!"
+			x: 9.5d
+			y: 11.5d
+			description: ["As shocking as it may be, this tesla coil can do serious shocking, it can turn that piece of cast iron into a full blown magnet."]
+			id: "4960207A06C7E636"
+			tasks: [{
+				id: "021393C5B5FF0AF3"
+				type: "item"
+				item: "createaddition:tesla_coil"
+				consume_items: false
+			}]
+		}
+	]
+	quest_links: [ ]
+}

@@ -1,0 +1,48 @@
+
+Create: Back on Track TODO
+
+RELEASES
+
+    [1.1]
+    Progression
+        
+
+    Questing
+        - Remove ALL A&B texts
+        - Better side quests (shop, intro)
+
+    Mechanics
+        - Few new mods [DONE]
+
+
+
+    [1.2+]
+    Progression
+        - Chapter 3c => chocolate related
+            3 types of chocolate + marshmallow + explosive mechanism == Chocolate Bomb
+        
+        (Big Overhaul)
+        - Chapter 1
+            Preserve zinc
+            Use another mechanic (Custom?)
+
+        - Chapter 2
+            Preserve skystone processing
+            Scrap Above & Beyond part except skystone
+            Automatable Brass through weird thing (Not copper yet)
+
+        - Chapter 3
+            Preserve gunpowder
+            Increase gunpowder process
+            New steel processing like A&B's Invar
+
+        - Rules =>
+            Ranking -> Materials have rankings, advanced materials go further
+            Tree -> Tree-like progression
+            Less Repetition -> materials are used once or few times in the progression
+
+    Mechanics
+        - Core Mod
+            Custom structures
+            Custom Create machinery
+

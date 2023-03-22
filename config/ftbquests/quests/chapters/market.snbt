@@ -1,0 +1,678 @@
+{
+	id: "44F68408CAD025B8"
+	group: ""
+	order_index: 2
+	filename: "market"
+	title: "&a Gadget Shop"
+	icon: {
+		id: "create:potato_cannon"
+		Count: 1b
+		tag: {
+			Damage: 0
+		}
+	}
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	images: [
+		{
+			x: 5.0d
+			y: -2.5d
+			width: 12.0d
+			height: 2.0d
+			rotation: 0.0d
+			image: "kubejs:textures/gui/shelf.png"
+			hover: ["Relics"]
+			click: ""
+			dev: false
+			corner: false
+		}
+		{
+			x: 5.0d
+			y: 1.5d
+			width: 12.0d
+			height: 2.0d
+			rotation: 0.0d
+			image: "kubejs:textures/gui/shelf.png"
+			hover: [ ]
+			click: ""
+			dev: false
+			corner: false
+		}
+		{
+			x: 5.0d
+			y: -0.5d
+			width: 12.0d
+			height: 2.0d
+			rotation: 0.0d
+			image: "kubejs:textures/gui/shelf.png"
+			hover: ["Funky Kits"]
+			click: ""
+			dev: false
+			corner: false
+		}
+	]
+	quests: [
+		{
+			title: "Sawlty"
+			icon: {
+				id: "kubejs:diamond_saw"
+				Count: 1b
+				tag: {
+					display: {
+						Name: "{\"text\":\"Enchanted Saw\",\"color\":\"gold\",\"italic\":false}"
+					}
+					Enchantments: [{
+						id: "minecraft:unbreaking"
+						lvl: 10s
+					}]
+					Unbreakable: 1
+					Damage: 0
+					HideFlags: 1
+				}
+			}
+			x: 1.0d
+			y: -2.5d
+			shape: "rsquare"
+			subtitle: "5 Gold"
+			description: ["Buy this relic to minimise the Tool Maintenance in the assembly of &6Kinetic Mechanisms&r."]
+			hide_dependency_lines: true
+			id: "4F953BACF4D1C151"
+			tasks: [
+				{
+					id: "4C77B71D0EC3B2EA"
+					type: "item"
+					item: {
+						id: "kubejs:diamond_saw"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+					}
+				}
+				{
+					id: "3EE8736C08EF80F4"
+					type: "item"
+					icon: { id: "thermal:gold_coin", Count: 5b }
+					item: "thermal:gold_coin"
+					count: 5L
+				}
+			]
+			rewards: [{
+				id: "56DB21D18FB1FF64"
+				type: "item"
+				item: {
+					id: "kubejs:diamond_saw"
+					Count: 1b
+					tag: {
+						HideFlags: 1
+						Enchantments: [{
+							lvl: 10s
+							id: "minecraft:unbreaking"
+						}]
+						Unbreakable: 1
+						Damage: 0
+						display: {
+							Name: "{\"text\":\"Enchanted Diamond Saw\",\"color\":\"gold\",\"italic\":false}"
+						}
+					}
+				}
+			}]
+		}
+		{
+			title: "Never Screwed"
+			icon: {
+				id: "kubejs:screwdriver"
+				Count: 1b
+				tag: {
+					display: {
+						Name: "{\"text\":\"Enchanted Screwdriver\",\"color\":\"gold\",\"italic\":false}"
+					}
+					Enchantments: [{
+						id: "minecraft:unbreaking"
+						lvl: 10s
+					}]
+					Unbreakable: 1
+					Damage: 0
+					HideFlags: 1
+				}
+			}
+			x: 2.5d
+			y: -2.5d
+			shape: "rsquare"
+			subtitle: "5 Gold"
+			description: ["Buy this relic to minimise the Tool Maintenance in the assembly of &6Precision Mechanisms&r."]
+			id: "72CACE8F0E4701B1"
+			tasks: [
+				{
+					id: "1E25EB2883C9A960"
+					type: "item"
+					item: {
+						id: "kubejs:screwdriver"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+					}
+					consume_items: true
+				}
+				{
+					id: "74585BB7E80CF010"
+					type: "item"
+					icon: { id: "thermal:gold_coin", Count: 5b }
+					item: "thermal:gold_coin"
+					count: 5L
+				}
+			]
+			rewards: [{
+				id: "743730BBE32A0875"
+				type: "item"
+				item: {
+					id: "kubejs:screwdriver"
+					Count: 1b
+					tag: {
+						HideFlags: 1
+						Enchantments: [{
+							lvl: 10s
+							id: "minecraft:unbreaking"
+						}]
+						Unbreakable: 1
+						Damage: 0
+						display: {
+							Name: "{\"text\":\"Enchanted Screwdriver\",\"color\":\"gold\",\"italic\":false}"
+						}
+					}
+				}
+			}]
+		}
+		{
+			title: "Hot Irons In Your Area"
+			icon: {
+				id: "kubejs:soldering_iron"
+				Count: 1b
+				tag: {
+					Damage: 0
+					Enchantments: [{
+						id: "minecraft:unbreaking"
+						lvl: 3s
+					}]
+				}
+			}
+			x: 4.0d
+			y: -2.5d
+			shape: "rsquare"
+			subtitle: "7 Gold"
+			description: ["Buy this relic to minimise the Tool Maintenance in the assembly of &6Inductive Mechanisms&r."]
+			id: "43FC566E833BE834"
+			tasks: [
+				{
+					id: "36CBD54BCB068EB1"
+					type: "item"
+					item: {
+						id: "kubejs:soldering_iron"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+					}
+				}
+				{
+					id: "5B31A98B9EFCCFAB"
+					type: "item"
+					icon: { id: "thermal:gold_coin", Count: 10b }
+					item: "thermal:gold_coin"
+					count: 10L
+				}
+			]
+			rewards: [{
+				id: "0F4C7BB4C0ECB4CC"
+				type: "item"
+				item: {
+					id: "kubejs:soldering_iron"
+					Count: 1b
+					tag: {
+						HideFlags: 1
+						Enchantments: [{
+							lvl: 10s
+							id: "minecraft:unbreaking"
+						}]
+						Unbreakable: 1
+						Damage: 0
+						display: {
+							Name: "{\"text\":\"Enchanted Soldering Iron\",\"color\":\"gold\",\"italic\":false}"
+						}
+					}
+				}
+			}]
+		}
+		{
+			title: "The Gadget Shop"
+			icon: {
+				id: "create:potato_cannon"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+			}
+			x: -1.5d
+			y: -0.5d
+			shape: "hexagon"
+			description: [
+				"&2The Gadget Shop&r provides you options to to throw your money at a variety of fun and useful items and gadgets."
+				""
+				"Have a look around. I'm sure you'll find something of use, or fun."
+			]
+			size: 2.0d
+			id: "0F870BEA235D662D"
+			tasks: [{
+				id: "3929233A89B34A71"
+				type: "checkmark"
+			}]
+		}
+		{
+			title: "Manual Exchange"
+			icon: { id: "thermal:silver_coin", Count: 16b }
+			x: -1.5d
+			y: -2.5d
+			shape: "circle"
+			subtitle: "Gold -> Silver"
+			description: ["Exchange gold coins for silver coins."]
+			dependencies: ["0F870BEA235D662D"]
+			optional: true
+			can_repeat: true
+			id: "5326F6482C45D22A"
+			tasks: [{
+				id: "772821832EE93341"
+				type: "item"
+				item: "thermal:gold_coin"
+			}]
+			rewards: [
+				{
+					id: "26512E93CE404069"
+					type: "item"
+					icon: { id: "thermal:silver_coin", Count: 64b }
+					auto: "enabled"
+					item: "thermal:silver_coin"
+					count: 64
+				}
+				{
+					id: "6FA6A9A201CA27BE"
+					type: "custom"
+					title: "Repeatable"
+					icon: "thermal:machine_cycle_augment"
+					tags: ["reset"]
+					auto: "no_toast"
+				}
+			]
+		}
+		{
+			title: "Manual Exchange"
+			icon: { id: "thermal:gold_coin", Count: 2b }
+			x: -1.5d
+			y: 1.5d
+			shape: "circle"
+			subtitle: "Silver -> Gold"
+			description: ["Some trades require you to hand in Gold Coins. These are worth a stack of Silver each."]
+			dependencies: ["0F870BEA235D662D"]
+			can_repeat: true
+			id: "1A566C74B1F7F050"
+			tasks: [{
+				id: "2387D852CA97AD1A"
+				type: "item"
+				icon: { id: "thermal:silver_coin", Count: 64b }
+				item: "thermal:silver_coin"
+				count: 64L
+			}]
+			rewards: [
+				{
+					id: "66BE3DDEC92812C4"
+					type: "item"
+					auto: "enabled"
+					item: "thermal:gold_coin"
+				}
+				{
+					id: "6E78A95786CA5B28"
+					type: "custom"
+					title: "Repeatable"
+					icon: "thermal:machine_cycle_augment"
+					tags: ["reset"]
+					auto: "no_toast"
+				}
+			]
+		}
+		{
+			title: "Unlimited Creativity"
+			icon: {
+				id: "tconstruct:vein_hammer"
+				Count: 1b
+				tag: {
+					tic_multipliers: {
+						"tconstruct:mining_speed": 0.3f
+						"tconstruct:durability": 5.0f
+						"tconstruct:attack_damage": 1.25f
+					}
+					tic_stats: {
+						"tconstruct:attack_damage": 6.8875f
+						"tconstruct:harvest_tier": "minecraft:diamond"
+						"tconstruct:durability": 4715.4f
+						"tconstruct:mining_speed": 2.1923997f
+						"tconstruct:attack_speed": 0.8925f
+					}
+					Damage: 0
+					tic_materials: [
+						"tconstruct:steel"
+						"tconstruct:steel"
+						"tconstruct:steel"
+						"tconstruct:steel"
+					]
+					tic_modifiers: [
+						{
+							name: "tconstruct:piercing"
+							level: 2s
+						}
+						{
+							name: "tconstruct:ductile"
+							level: 4s
+						}
+					]
+					tic_broken: 0b
+					tic_persistent_data: {
+						upgrades: 2
+						abilities: 1
+					}
+				}
+			}
+			x: 5.5d
+			y: -2.5d
+			shape: "rsquare"
+			subtitle: "10 Gold + Anvil"
+			description: ["Buy this legendary relic to upgrade your tools with an extra slot."]
+			id: "2E6F7F5789855DDC"
+			tasks: [
+				{
+					id: "3D9E6F27DDFE8357"
+					type: "item"
+					item: "thermal:gold_coin"
+					count: 10L
+				}
+				{
+					id: "71BCB3EFAA787A43"
+					type: "item"
+					item: {
+						id: "tconstruct:tinkers_anvil"
+						Count: 1b
+						tag: {
+							texture: "alloyed:steel_block"
+						}
+					}
+				}
+			]
+			rewards: [{
+				id: "32295F46D6E22A4C"
+				type: "item"
+				item: {
+					id: "tconstruct:creative_slot"
+					Count: 1b
+					tag: {
+						slot: "upgrades"
+					}
+				}
+			}]
+		}
+		{
+			title: "Adopt a Duckie"
+			icon: "duckling:duck_egg"
+			x: 1.0d
+			y: 1.5d
+			shape: "rsquare"
+			description: ["Adopt a cute duck, has chance to come with a partner, refunding this is a sin."]
+			id: "346A833FFAEC6050"
+			tasks: [
+				{
+					id: "1E5E9316D7D6A090"
+					type: "item"
+					item: "thermal:silver_coin"
+					count: 10L
+				}
+				{
+					id: "79D55DE5275C8686"
+					type: "item"
+					item: "minecraft:egg"
+				}
+			]
+			rewards: [{
+				id: "6FCE4AD906C430A2"
+				type: "item"
+				item: "duckling:duck_spawn_egg"
+				random_bonus: 1
+			}]
+		}
+		{
+			x: 1.0d
+			y: -0.5d
+			shape: "rsquare"
+			id: "7093258BE7F2C010"
+			tasks: [{
+				id: "67C71077DEB79E5B"
+				type: "item"
+				item: "create:track"
+			}]
+		}
+		{
+			icon: {
+				id: "create_confectionery:full_chocolate_bar"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+			}
+			x: 2.5d
+			y: -0.5d
+			shape: "rsquare"
+			id: "49125BC18946F7C6"
+			tasks: [{
+				id: "51B38B4373785506"
+				type: "item"
+				item: "thermal:silver_coin"
+				count: 15L
+			}]
+			rewards: [
+				{
+					id: "00698CFE142590E4"
+					type: "item"
+					item: "create_confectionery:soothing_hot_chocolate"
+					count: 3
+				}
+				{
+					id: "37E94231E7BE913F"
+					type: "item"
+					item: "create_confectionery:chocolate_glazed_marshmallow"
+					count: 7
+				}
+				{
+					id: "5AB8B207E1832556"
+					type: "item"
+					item: {
+						id: "create_confectionery:full_ruby_chocolate_bar"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+					}
+					count: 5
+				}
+			]
+		}
+		{
+			icon: "minecraft:poppy"
+			x: 4.0d
+			y: -0.5d
+			shape: "rsquare"
+			id: "6AF21B60869215D9"
+			tasks: [
+				{
+					id: "5830B690FADBFA10"
+					type: "item"
+					item: "thermal:silver_coin"
+					count: 15L
+				}
+				{
+					id: "585A4229DA201975"
+					type: "item"
+					item: {
+						id: "farmersdelight:iron_knife"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "6D8C9718D35069AC"
+					type: "item"
+					item: "minecraft:poppy"
+					count: 5
+				}
+				{
+					id: "2F97EB78A9492BC3"
+					type: "item"
+					item: "minecraft:dandelion"
+					count: 5
+				}
+				{
+					id: "69B9EE932DEA28CD"
+					type: "item"
+					item: "minecraft:rose_bush"
+					count: 5
+				}
+				{
+					id: "02DA8CBB7FB8CEAA"
+					type: "item"
+					item: "forbidden_arcanus:yellow_orchid"
+					count: 5
+				}
+				{
+					id: "2199F2C676349F26"
+					type: "item"
+					item: "minecraft:blue_orchid"
+					count: 5
+				}
+				{
+					id: "2200D5CBF487CAE9"
+					type: "item"
+					item: "minecraft:azure_bluet"
+					count: 5
+				}
+				{
+					id: "36077010E8BB841E"
+					type: "item"
+					item: "minecraft:pink_tulip"
+					count: 5
+				}
+				{
+					id: "65D71FFFDB3314B9"
+					type: "item"
+					item: "minecraft:oxeye_daisy"
+					count: 5
+				}
+				{
+					id: "73AD186CB211DAA3"
+					type: "item"
+					item: "minecraft:cornflower"
+					count: 5
+				}
+			]
+		}
+		{
+			icon: "minecraft:spruce_sapling"
+			x: 5.5d
+			y: -0.5d
+			shape: "rsquare"
+			id: "294A24F286C7381F"
+			tasks: [
+				{
+					id: "6B898FCA45D600B4"
+					type: "item"
+					title: "Forest Seed"
+					item: "thermal:silver_coin"
+					count: 20L
+				}
+				{
+					id: "320477B9FF042779"
+					type: "item"
+					item: {
+						id: "minecraft:iron_axe"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "6D92E8F01E4C3E3B"
+					type: "item"
+					item: "minecraft:spruce_sapling"
+				}
+				{
+					id: "46F22601E8046659"
+					type: "item"
+					item: "minecraft:birch_sapling"
+				}
+				{
+					id: "466D541125F5D697"
+					type: "item"
+					item: "minecraft:oak_sapling"
+				}
+				{
+					id: "38628F97C7567D3D"
+					type: "item"
+					item: "minecraft:jungle_sapling"
+				}
+				{
+					id: "26267C5B5DF05576"
+					type: "item"
+					item: "minecraft:acacia_sapling"
+				}
+				{
+					id: "04FB6E9E4D6131C0"
+					type: "item"
+					item: "minecraft:dark_oak_sapling"
+				}
+			]
+		}
+		{
+			icon: "farmersdelight:grilled_salmon"
+			x: 2.5d
+			y: 1.5d
+			shape: "rsquare"
+			id: "00512C8698D4A983"
+			tasks: [{
+				id: "4E010320D8963F50"
+				type: "item"
+				item: "thermal:silver_coin"
+				count: 16L
+			}]
+			rewards: [{
+				id: "3D67A31FB5602939"
+				type: "item"
+				item: "farmersdelight:grilled_salmon"
+				count: 12
+			}]
+		}
+		{
+			x: 4.0d
+			y: 4.0d
+			shape: "rsquare"
+			id: "632AF8573A2BA49E"
+			tasks: [{
+				id: "40E59C16EAB7C01B"
+				type: "item"
+				item: "createbigcannons:solid_shot"
+			}]
+		}
+	]
+	quest_links: [ ]
+}
