@@ -3,11 +3,10 @@ type = menu
 customization-meta {
   identifier = de.keksuccino.drippyloadingscreen.customization.DrippyOverlayScreen
   randomgroup = 1
-  biggerthanwidth = 1100
   renderorder = foreground
   randommode = false
   randomonlyfirsttime = false
-  biggerthanheight = -1
+  smallerthanwidth = 1100
 }
 
 customization {
@@ -41,23 +40,23 @@ customization {
 customization {
   orientation = top-left
   hidden = false
-  x = 87
-  width = 428
+  x = 228
+  width = 504
   action = deep_customization_element:drippy_overlay_progress_bar
   actionid = b67fb59d-aafc-475d-a70f-a507ba1d5be11679525058585
-  y = 352
+  y = 414
   height = 10
 }
 
 customization {
   path = kubejs/assets/kubejs/textures/images/logo.png
   orientation = mid-centered
-  x = -283
-  width = 567
+  x = -177
+  width = 359
   action = addtexture
   actionid = 747914f5-1854-4385-b4e1-d18560fcc6bd1679525097162
-  y = -159
-  height = 320
+  y = -101
+  height = 202
 }
 
 customization {
@@ -70,10 +69,10 @@ customization {
   vr:showif:oslinux = true
   bouncing = true
   vanilla-like = false
-  x = -238
-  actionid = 8bd0e0bc-b66e-4128-9d5d-67f7b38f78fa1679772944451
+  x = -159
+  actionid = 46e3e1cc-2b18-4810-a91b-bb6399f433041679772231550
   action = addsplash
-  y = 71
-  text = I use Arch BTW!
+  y = 39
+  text = I Use Arch BTW! 
 }
 

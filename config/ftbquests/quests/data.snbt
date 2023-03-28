@@ -1,7 +1,7 @@
 {
 	version: 13
 	title: "Create: Back on Track"
-	icon: "alloyed:bronze_sheet"
+	icon: "alloyed:steel_sheet"
 	default_reward_team: true
 	default_consume_items: false
 	default_autoclaim_rewards: "disabled"

@@ -58,16 +58,16 @@
 				id: "kubejs:diamond_saw"
 				Count: 1b
 				tag: {
-					display: {
-						Name: "{\"text\":\"Enchanted Saw\",\"color\":\"gold\",\"italic\":false}"
-					}
+					HideFlags: 1
 					Enchantments: [{
 						id: "minecraft:unbreaking"
 						lvl: 10s
 					}]
 					Unbreakable: 1
 					Damage: 0
-					HideFlags: 1
+					display: {
+						Name: "{\"text\":\"Enchanted Saw\",\"color\":\"gold\",\"italic\":false}"
+					}
 				}
 			}
 			x: 1.0d
@@ -104,16 +104,16 @@
 					id: "kubejs:diamond_saw"
 					Count: 1b
 					tag: {
-						HideFlags: 1
+						display: {
+							Name: "{\"text\":\"Enchanted Diamond Saw\",\"color\":\"gold\",\"italic\":false}"
+						}
 						Enchantments: [{
 							lvl: 10s
 							id: "minecraft:unbreaking"
 						}]
 						Unbreakable: 1
 						Damage: 0
-						display: {
-							Name: "{\"text\":\"Enchanted Diamond Saw\",\"color\":\"gold\",\"italic\":false}"
-						}
+						HideFlags: 1
 					}
 				}
 			}]
@@ -124,16 +124,16 @@
 				id: "kubejs:screwdriver"
 				Count: 1b
 				tag: {
-					display: {
-						Name: "{\"text\":\"Enchanted Screwdriver\",\"color\":\"gold\",\"italic\":false}"
-					}
+					HideFlags: 1
 					Enchantments: [{
 						id: "minecraft:unbreaking"
 						lvl: 10s
 					}]
 					Unbreakable: 1
 					Damage: 0
-					HideFlags: 1
+					display: {
+						Name: "{\"text\":\"Enchanted Screwdriver\",\"color\":\"gold\",\"italic\":false}"
+					}
 				}
 			}
 			x: 2.5d
@@ -170,16 +170,16 @@
 					id: "kubejs:screwdriver"
 					Count: 1b
 					tag: {
-						HideFlags: 1
+						display: {
+							Name: "{\"text\":\"Enchanted Screwdriver\",\"color\":\"gold\",\"italic\":false}"
+						}
 						Enchantments: [{
 							lvl: 10s
 							id: "minecraft:unbreaking"
 						}]
 						Unbreakable: 1
 						Damage: 0
-						display: {
-							Name: "{\"text\":\"Enchanted Screwdriver\",\"color\":\"gold\",\"italic\":false}"
-						}
+						HideFlags: 1
 					}
 				}
 			}]
@@ -230,16 +230,16 @@
 					id: "kubejs:soldering_iron"
 					Count: 1b
 					tag: {
-						HideFlags: 1
+						display: {
+							Name: "{\"text\":\"Enchanted Soldering Iron\",\"color\":\"gold\",\"italic\":false}"
+						}
 						Enchantments: [{
 							lvl: 10s
 							id: "minecraft:unbreaking"
 						}]
 						Unbreakable: 1
 						Damage: 0
-						display: {
-							Name: "{\"text\":\"Enchanted Soldering Iron\",\"color\":\"gold\",\"italic\":false}"
-						}
+						HideFlags: 1
 					}
 				}
 			}]
@@ -345,11 +345,7 @@
 				id: "tconstruct:vein_hammer"
 				Count: 1b
 				tag: {
-					tic_multipliers: {
-						"tconstruct:mining_speed": 0.3f
-						"tconstruct:durability": 5.0f
-						"tconstruct:attack_damage": 1.25f
-					}
+					Damage: 0
 					tic_stats: {
 						"tconstruct:attack_damage": 6.8875f
 						"tconstruct:harvest_tier": "minecraft:diamond"
@@ -357,13 +353,12 @@
 						"tconstruct:mining_speed": 2.1923997f
 						"tconstruct:attack_speed": 0.8925f
 					}
-					Damage: 0
-					tic_materials: [
-						"tconstruct:steel"
-						"tconstruct:steel"
-						"tconstruct:steel"
-						"tconstruct:steel"
-					]
+					tic_multipliers: {
+						"tconstruct:mining_speed": 0.3f
+						"tconstruct:durability": 5.0f
+						"tconstruct:attack_damage": 1.25f
+					}
+					tic_broken: 0b
 					tic_modifiers: [
 						{
 							name: "tconstruct:piercing"
@@ -374,7 +369,12 @@
 							level: 4s
 						}
 					]
-					tic_broken: 0b
+					tic_materials: [
+						"tconstruct:steel"
+						"tconstruct:steel"
+						"tconstruct:steel"
+						"tconstruct:steel"
+					]
 					tic_persistent_data: {
 						upgrades: 2
 						abilities: 1
