@@ -29,7 +29,7 @@
 		{
 			title: "Engineer's Magazine"
 			icon: "minecraft:oak_sign"
-			x: 0.0d
+			x: -1.0d
 			y: -2.0d
 			shape: "hexagon"
 			description: ["Here at &3Engineer's Magazine&r we provide the best employement oportunities for getting that bread, the works range from digging dirt to interstellar bounties."]
@@ -44,7 +44,7 @@
 			title: "Investors are Investing"
 			icon: "minecraft:book"
 			x: 2.5d
-			y: -3.5d
+			y: -4.0d
 			subtitle: "30 Silver"
 			description: [
 				"Write an application telling how will your organization change the world."
@@ -62,11 +62,13 @@
 					Count: 1b
 					tag: { }
 				}
+				consume_items: true
 			}]
 			rewards: [{
 				id: "6C5F42C1888F0C63"
 				type: "item"
 				icon: { id: "thermal:silver_coin", Count: 32b }
+				team_reward: true
 				item: "thermal:silver_coin"
 				count: 30
 			}]
@@ -74,7 +76,7 @@
 		{
 			title: "Ultimate Bounty"
 			x: 16.5d
-			y: 1.25d
+			y: 0.75d
 			shape: "pentagon"
 			subtitle: "20 Gold"
 			description: ["This is the rarest of them all, every globe colection needs one of these"]
@@ -94,8 +96,8 @@
 		}
 		{
 			title: "Blood Donation"
-			x: 2.5d
-			y: 1.0d
+			x: 8.5d
+			y: -2.0d
 			subtitle: "10 Silver"
 			description: ["Donate that goofy blood you leave in your smeltery"]
 			id: "17EAB8633782ADD9"
@@ -116,8 +118,8 @@
 		}
 		{
 			title: "Used Rockets"
-			x: 12.0d
-			y: 1.25d
+			x: 11.25d
+			y: 0.75d
 			shape: "hexagon"
 			subtitle: "3 Gold"
 			description: ["Got an old rocket sitting in the corner? Sell it here!"]
@@ -143,7 +145,7 @@
 		{
 			title: "Full Restock"
 			x: 6.5d
-			y: 1.0d
+			y: -2.0d
 			subtitle: "7 Gold"
 			description: ["A large bread producer needs a quick restock!"]
 			id: "2421E3B7BABCD7B1"
@@ -164,7 +166,7 @@
 		{
 			title: "Metalically"
 			x: 4.5d
-			y: -3.5d
+			y: -4.0d
 			subtitle: "16 Silver"
 			description: ["The metal processing plants urge for ores, give them a bit of your mining results."]
 			id: "1E3E3E5533D245A6"
@@ -206,6 +208,7 @@
 			title: "Metalomania"
 			x: 4.5d
 			y: -2.0d
+			description: ["Fancier metals require fancier rewards."]
 			dependencies: ["1E3E3E5533D245A6"]
 			id: "2547BE1B098305A7"
 			tasks: [
@@ -238,8 +241,8 @@
 		}
 		{
 			title: "Movie Rating"
-			x: 16.0d
-			y: -2.0d
+			x: 13.0d
+			y: -5.5d
 			description: ["Rotten tomatoes are an essential part of movie rating, imagine if tomatoes never got rotten, what would we throw at them?"]
 			id: "428584CEC8AC19B6"
 			tasks: [{
@@ -257,8 +260,8 @@
 		}
 		{
 			title: "The Flattening"
-			x: 7.5d
-			y: -3.5d
+			x: 6.5d
+			y: -4.0d
 			description: [
 				"3 stacks of dirt are surprisingly useful for flattening terrains."
 				""
@@ -288,8 +291,8 @@
 		}
 		{
 			title: "Cute Gardening"
-			x: 11.5d
-			y: -3.5d
+			x: 8.5d
+			y: -4.0d
 			description: ["These cute little dripleafs will be perfect on that garden over there."]
 			id: "0F79FC684268C640"
 			tasks: [{
@@ -307,8 +310,8 @@
 		}
 		{
 			title: "Cone Traffic"
-			x: 13.0d
-			y: -2.0d
+			x: 15.0d
+			y: -5.5d
 			description: ["The industry demands more traffic cones, increasing cone traffic trains will be safer to ride and less collisions will happen."]
 			id: "36C7F5DE56EABC0A"
 			tasks: [{
@@ -325,8 +328,8 @@
 		}
 		{
 			title: "Pesky Arthropods"
-			x: 14.5d
-			y: -3.5d
+			x: 2.5d
+			y: -2.0d
 			id: "576041A5B3ACFAEF"
 			tasks: [{
 				id: "3A2E5DD8D1B80CB0"
@@ -346,25 +349,24 @@
 		{
 			title: "Meteor Hunter"
 			icon: "ae2:sky_stone_block"
-			x: 4.5d
-			y: 1.0d
+			x: 11.0d
+			y: -5.5d
 			description: ["You found skystone! Thank you for sharing the location."]
 			id: "50C4475040D2064C"
-			tasks: [
-				{
-					id: "22FF303235CCCE27"
-					type: "observation"
-					icon: "ae2:sky_stone_block"
-					timer: 0L
-					observe_type: 0
-					to_observe: "ae2:sky_stone_block"
-				}
-				{
-					id: "3AE6BF6C610B19B7"
-					type: "checkmark"
-					title: "I Will Share the Location."
-				}
-			]
+			tasks: [{
+				id: "22FF303235CCCE27"
+				type: "observation"
+				icon: "ae2:sky_stone_block"
+				timer: 0L
+				observe_type: 0
+				to_observe: "ae2:sky_stone_block"
+			}]
+			rewards: [{
+				id: "36B7B24AA3FDC153"
+				type: "item"
+				item: "thermal:silver_coin"
+				count: 10
+			}]
 		}
 	]
 	quest_links: [ ]

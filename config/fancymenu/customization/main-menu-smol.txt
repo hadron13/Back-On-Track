@@ -255,10 +255,10 @@ customization {
   enable_scrolling = false
   shadow = true
   scale = 1.0
-  source = Create: Back on Track version 1.1
+  source = config/packversion.txt
   text_border = 0
   case_mode = normal
-  source_mode = direct
+  source_mode = local
   line_spacing = 1
   x = 0
   width = 208

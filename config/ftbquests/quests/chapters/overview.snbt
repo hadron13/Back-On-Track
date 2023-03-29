@@ -455,7 +455,10 @@
 			y: 0.0d
 			shape: "square"
 			subtitle: "Milestone"
-			dependencies: ["780E8AE86250C73D"]
+			dependencies: [
+				"780E8AE86250C73D"
+				"4E549678E05D7FA8"
+			]
 			id: "73CF11A2C0D4A9E5"
 			tasks: [{
 				id: "4B3947CAC6E1D82E"

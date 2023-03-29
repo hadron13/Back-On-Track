@@ -45,6 +45,8 @@
 				""
 				"In this factory you will need to feed common and specific materials for each of the four main components of the final circuit."
 			]
+			dependencies: ["780E8AE86250C73D"]
+			hide: true
 			size: 2.0d
 			id: "6C3258881A44FA46"
 			tasks: [{

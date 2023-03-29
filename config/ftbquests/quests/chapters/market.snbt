@@ -58,16 +58,16 @@
 				id: "kubejs:diamond_saw"
 				Count: 1b
 				tag: {
-					display: {
-						Name: "{\"text\":\"Enchanted Saw\",\"color\":\"gold\",\"italic\":false}"
-					}
+					HideFlags: 1
 					Enchantments: [{
 						id: "minecraft:unbreaking"
 						lvl: 10s
 					}]
 					Unbreakable: 1
 					Damage: 0
-					HideFlags: 1
+					display: {
+						Name: "{\"text\":\"Enchanted Saw\",\"color\":\"gold\",\"italic\":false}"
+					}
 				}
 			}
 			x: 1.0d
@@ -88,6 +88,7 @@
 							Damage: 0
 						}
 					}
+					consume_items: true
 				}
 				{
 					id: "3EE8736C08EF80F4"
@@ -95,6 +96,7 @@
 					icon: { id: "thermal:gold_coin", Count: 5b }
 					item: "thermal:gold_coin"
 					count: 5L
+					consume_items: true
 				}
 			]
 			rewards: [{
@@ -104,16 +106,16 @@
 					id: "kubejs:diamond_saw"
 					Count: 1b
 					tag: {
-						HideFlags: 1
+						display: {
+							Name: "{\"text\":\"Enchanted Diamond Saw\",\"color\":\"gold\",\"italic\":false}"
+						}
 						Enchantments: [{
 							lvl: 10s
 							id: "minecraft:unbreaking"
 						}]
 						Unbreakable: 1
 						Damage: 0
-						display: {
-							Name: "{\"text\":\"Enchanted Diamond Saw\",\"color\":\"gold\",\"italic\":false}"
-						}
+						HideFlags: 1
 					}
 				}
 			}]
@@ -161,6 +163,7 @@
 					icon: { id: "thermal:gold_coin", Count: 5b }
 					item: "thermal:gold_coin"
 					count: 5L
+					consume_items: true
 				}
 			]
 			rewards: [{
@@ -170,16 +173,16 @@
 					id: "kubejs:screwdriver"
 					Count: 1b
 					tag: {
-						HideFlags: 1
+						display: {
+							Name: "{\"text\":\"Enchanted Screwdriver\",\"color\":\"gold\",\"italic\":false}"
+						}
 						Enchantments: [{
 							lvl: 10s
 							id: "minecraft:unbreaking"
 						}]
 						Unbreakable: 1
 						Damage: 0
-						display: {
-							Name: "{\"text\":\"Enchanted Screwdriver\",\"color\":\"gold\",\"italic\":false}"
-						}
+						HideFlags: 1
 					}
 				}
 			}]
@@ -214,6 +217,7 @@
 							Damage: 0
 						}
 					}
+					consume_items: true
 				}
 				{
 					id: "5B31A98B9EFCCFAB"
@@ -221,6 +225,7 @@
 					icon: { id: "thermal:gold_coin", Count: 10b }
 					item: "thermal:gold_coin"
 					count: 10L
+					consume_items: true
 				}
 			]
 			rewards: [{
@@ -230,16 +235,16 @@
 					id: "kubejs:soldering_iron"
 					Count: 1b
 					tag: {
-						HideFlags: 1
+						display: {
+							Name: "{\"text\":\"Enchanted Soldering Iron\",\"color\":\"gold\",\"italic\":false}"
+						}
 						Enchantments: [{
 							lvl: 10s
 							id: "minecraft:unbreaking"
 						}]
 						Unbreakable: 1
 						Damage: 0
-						display: {
-							Name: "{\"text\":\"Enchanted Soldering Iron\",\"color\":\"gold\",\"italic\":false}"
-						}
+						HideFlags: 1
 					}
 				}
 			}]
@@ -284,6 +289,7 @@
 				id: "772821832EE93341"
 				type: "item"
 				item: "thermal:gold_coin"
+				consume_items: true
 			}]
 			rewards: [
 				{
@@ -321,12 +327,12 @@
 				icon: { id: "thermal:silver_coin", Count: 64b }
 				item: "thermal:silver_coin"
 				count: 64L
+				consume_items: true
 			}]
 			rewards: [
 				{
 					id: "66BE3DDEC92812C4"
 					type: "item"
-					auto: "enabled"
 					item: "thermal:gold_coin"
 				}
 				{
@@ -345,11 +351,7 @@
 				id: "tconstruct:vein_hammer"
 				Count: 1b
 				tag: {
-					tic_multipliers: {
-						"tconstruct:mining_speed": 0.3f
-						"tconstruct:durability": 5.0f
-						"tconstruct:attack_damage": 1.25f
-					}
+					Damage: 0
 					tic_stats: {
 						"tconstruct:attack_damage": 6.8875f
 						"tconstruct:harvest_tier": "minecraft:diamond"
@@ -357,13 +359,12 @@
 						"tconstruct:mining_speed": 2.1923997f
 						"tconstruct:attack_speed": 0.8925f
 					}
-					Damage: 0
-					tic_materials: [
-						"tconstruct:steel"
-						"tconstruct:steel"
-						"tconstruct:steel"
-						"tconstruct:steel"
-					]
+					tic_multipliers: {
+						"tconstruct:mining_speed": 0.3f
+						"tconstruct:durability": 5.0f
+						"tconstruct:attack_damage": 1.25f
+					}
+					tic_broken: 0b
 					tic_modifiers: [
 						{
 							name: "tconstruct:piercing"
@@ -374,7 +375,12 @@
 							level: 4s
 						}
 					]
-					tic_broken: 0b
+					tic_materials: [
+						"tconstruct:steel"
+						"tconstruct:steel"
+						"tconstruct:steel"
+						"tconstruct:steel"
+					]
 					tic_persistent_data: {
 						upgrades: 2
 						abilities: 1
@@ -393,6 +399,7 @@
 					type: "item"
 					item: "thermal:gold_coin"
 					count: 10L
+					consume_items: true
 				}
 				{
 					id: "71BCB3EFAA787A43"
@@ -404,6 +411,7 @@
 							texture: "alloyed:steel_block"
 						}
 					}
+					consume_items: true
 				}
 			]
 			rewards: [{
@@ -424,6 +432,7 @@
 			x: 1.0d
 			y: 1.5d
 			shape: "rsquare"
+			subtitle: "10 Silver + 1 Egg"
 			description: ["Adopt a cute little duck! This purchase may come with a surprise partner for your duck too... And refusing it is truly a sin."]
 			id: "346A833FFAEC6050"
 			tasks: [
@@ -432,11 +441,13 @@
 					type: "item"
 					item: "thermal:silver_coin"
 					count: 10L
+					consume_items: true
 				}
 				{
 					id: "79D55DE5275C8686"
 					type: "item"
 					item: "minecraft:egg"
+					consume_items: true
 				}
 			]
 			rewards: [{
@@ -447,17 +458,41 @@
 			}]
 		}
 		{
+			title: "Railway Pro Kit"
+			icon: "create:track"
 			x: 1.0d
 			y: -0.5d
 			shape: "rsquare"
+			subtitle: "3 Gold"
+			description: [
+				"Only for pro railworkers, comes with half kilometer of track and enough for a simple rail network."
+				""
+				"Trust me, it's cheap for the ammount of stuff you get to play."
+			]
 			id: "7093258BE7F2C010"
 			tasks: [{
-				id: "67C71077DEB79E5B"
+				id: "3FED8A9B0CEA6243"
 				type: "item"
-				item: "create:track"
+				item: "thermal:gold_coin"
+				count: 3L
 			}]
+			rewards: [
+				{
+					id: "5969989CC69CD149"
+					type: "item"
+					item: "create:track"
+					count: 1024
+				}
+				{
+					id: "6AD8F557B3CDE4A3"
+					type: "item"
+					item: "kubejs:train_machine"
+					count: 3
+				}
+			]
 		}
 		{
+			title: "Unsanded Dessert"
 			icon: {
 				id: "create_confectionery:full_chocolate_bar"
 				Count: 1b
@@ -468,12 +503,15 @@
 			x: 2.5d
 			y: -0.5d
 			shape: "rsquare"
+			subtitle: "15 Silver"
+			description: ["Sweet treats for a small amount of uh, money..."]
 			id: "49125BC18946F7C6"
 			tasks: [{
 				id: "51B38B4373785506"
 				type: "item"
 				item: "thermal:silver_coin"
 				count: 15L
+				consume_items: true
 			}]
 			rewards: [
 				{
@@ -516,6 +554,7 @@
 					type: "item"
 					item: "thermal:silver_coin"
 					count: 15L
+					consume_items: true
 				}
 				{
 					id: "585A4229DA201975"
@@ -527,6 +566,7 @@
 							Damage: 0
 						}
 					}
+					consume_items: true
 				}
 			]
 			rewards: [
@@ -601,6 +641,7 @@
 					title: "Forest Seed"
 					item: "thermal:silver_coin"
 					count: 20L
+					consume_items: true
 				}
 				{
 					id: "320477B9FF042779"
@@ -612,6 +653,7 @@
 							Damage: 0
 						}
 					}
+					consume_items: true
 				}
 			]
 			rewards: [
@@ -653,6 +695,7 @@
 			x: 2.5d
 			y: 1.5d
 			shape: "rsquare"
+			subtitle: "16 Silver"
 			description: ["It's... salmon, and also quick, for when the hunger rings the doorbell."]
 			id: "00512C8698D4A983"
 			tasks: [{
@@ -660,6 +703,7 @@
 				type: "item"
 				item: "thermal:silver_coin"
 				count: 16L
+				consume_items: true
 			}]
 			rewards: [{
 				id: "3D67A31FB5602939"
@@ -674,6 +718,7 @@
 			x: 7.0d
 			y: -0.5d
 			shape: "rsquare"
+			subtitle: "25 Silver + 5 Iron"
 			description: ["So you want to destroy a castle's defences? This kit is just for you, comes with a basic assemble-and-play wrought iron cannon you can bring anywhere, comes with 5 shots."]
 			id: "632AF8573A2BA49E"
 			tasks: [
@@ -682,12 +727,14 @@
 					type: "item"
 					item: "thermal:silver_coin"
 					count: 25L
+					consume_items: true
 				}
 				{
 					id: "4CB43354A5AD66B2"
 					type: "item"
 					item: "minecraft:iron_ingot"
 					count: 5L
+					consume_items: true
 				}
 			]
 			rewards: [
@@ -736,6 +783,7 @@
 			x: 8.5d
 			y: -0.5d
 			shape: "rsquare"
+			subtitle: "25 Silver"
 			description: [
 				"Oh, someone is trying to penetrate the castle? This kit is the perfect counter to the Destroy-a-Castle kit."
 				""
@@ -749,6 +797,7 @@
 				type: "item"
 				item: "thermal:silver_coin"
 				count: 25L
+				consume_items: true
 			}]
 			rewards: [
 				{
@@ -788,13 +837,28 @@
 		}
 		{
 			title: "Self Defense Mechanism"
+			icon: {
+				id: "create:potato_cannon"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+			}
 			x: 4.0d
 			y: 1.5d
 			shape: "rsquare"
+			subtitle: "10 Silver"
 			description: ["This cute cannon may not be able to open a hole in a castle, however it can kill a dragon... And the munition is as cheap as it can get: the food you carry around with you."]
 			id: "72A119B48FA97E82"
 			tasks: [{
-				id: "71D5F854FECDFFC6"
+				id: "2C6EEE2E558B09B4"
+				type: "item"
+				item: "thermal:silver_coin"
+				count: 10L
+				consume_items: true
+			}]
+			rewards: [{
+				id: "2EDFD63A88951313"
 				type: "item"
 				item: {
 					id: "create:potato_cannon"
@@ -811,6 +875,7 @@
 			x: 5.5d
 			y: 1.5d
 			shape: "rsquare"
+			subtitle: "15 Silver"
 			description: [
 				"Is cannon? Check"
 				"Uses gunpowder? Check"
@@ -823,6 +888,7 @@
 				type: "item"
 				item: "thermal:silver_coin"
 				count: 15L
+				consume_items: true
 			}]
 			rewards: [
 				{

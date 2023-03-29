@@ -155,19 +155,6 @@ onEvent('item.registry', event => {
 	])
 
 	profession("Hunting", 0x393E46, 0xCF0000, [
-		// { in: RQ('slime_pearl'), out: S(6) },
-		// { in: RQ('catalyzing_gland'), out: S(10) },
-		// { in: RQ('witch_hat'), out: S(15) },
-		// { in: RQ('squid_beak'), out: S(3) },
-		// { in: RQ('withered_rib'), out: S(15) },
-		// { in: RQ('rib_bone'), out: S(5) },
-		// { in: RQ('zombie_heart'), out: S(5) },
-		// { in: RQ('chelicerae'), out: S(5) },
-		// { in: RQ('bat_wing'), out: S(10) },
-		// { in: RQ('frozen_core'), out: S(4) },
-		// { in: RQ('nebulous_heart'), out: S(5) },
-		// { in: RQ('molten_core'), out: S(5) },
-		// { in: RQ('eye_of_the_storm'), out: S(12) },
 		{ in: MC('phantom_membrane'), out: S(8) },
 		{ in: MC('rabbit_foot'), out: S(8) },
 		{ in: MC('nether_star'), out: G(1) },
@@ -276,6 +263,9 @@ onEvent('item.registry', event => {
 		{ in: MC('iron_boots'), out: S(2) },
 		{ in: MC('iron_leggings'), out: S(4) },
 		{ in: MC('iron_chestplate'), out: S(4) },
+		{ in: 'alloyed:steel_boots', out: S(4) },
+		{ in: 'alloyed:steel_leggings', out: S(8) },
+		{ in: 'alloyed:steel_chestplate', out: S(9) },
 		// { in: TC('blank_cast'), out: S(1) },
 		{ in: TC('ingot_cast'), out: S(2) },
 		{ in: TC('pick_head_cast'), out: S(3) },
@@ -358,6 +348,7 @@ onEvent('item.registry', event => {
 				item: "thermal:silver_coin"
 				icon: { id: "thermal:silver_coin", Count: ${entry_cost}b }
 				count: ${entry_cost}L
+				consume_items: true
 			}]
 			rewards: [
 				{
