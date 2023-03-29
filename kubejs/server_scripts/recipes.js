@@ -412,6 +412,7 @@ function unwantedRecipes(event) {
 
 function tweaks(event) {
 
+	event.remove({ mod:'toms_storage'})
 	event.remove({ id: 'waterstrainer:string_mesh' })
 	event.remove({ id: 'waterstrainer:iron_mesh' })
 	event.remove({ id: 'waterstrainer:obsidian_mesh' })
@@ -461,6 +462,14 @@ function tweaks(event) {
 		E: MC('ender_pearl')
 	})
 
+	event.shaped(BC('traffic_cone'), [
+			' S ',
+			' S ',
+			'SCS'
+		], {
+		C: MC('orange_dye'),
+		S: KJ('plastic')
+	})
 
 	event.recipes.createCrushing([Item.of(TE("bitumen")), Item.of(TE("bitumen"), 2).withChance(0.75), Item.of(TE("tar"), 1).withChance(0.75), Item.of(MC("sand")).withChance(0.25)], TE("oil_sand"))
 	event.recipes.createCrushing([Item.of(TE("bitumen")), Item.of(TE("bitumen"), 2).withChance(0.75), Item.of(TE("tar"), 1).withChance(0.75), Item.of(MC("red_sand")).withChance(0.25)], TE("oil_red_sand"))
@@ -468,23 +477,23 @@ function tweaks(event) {
 	// event.remove({ id: "forbidden_arcanus:iron_chain" }) // vanilla recipe conflict. what a world we live in
 	// event.shapeless(Item.of("forbidden_arcanus:iron_chain", 3), "minecraft:chain")
 
-	// event.remove({ id: "computercraft:turtle_advanced" })
-	// event.remove({ id: "computercraft:turtle_advanced_upgrade" })
-	// event.remove({ id: "computercraft:turtle_normal" })
+	event.remove({ id: "computercraft:turtle_advanced" })
+	event.remove({ id: "computercraft:turtle_advanced_upgrade" })
+	event.remove({ id: "computercraft:turtle_normal" })
 
-	// event.smithing("computercraft:turtle_normal", "computercraft:computer_normal", TE("invar_gear"))
-	// event.smithing("computercraft:turtle_advanced", "computercraft:computer_advanced", TE("invar_gear"))
-	// event.recipes.createMechanicalCrafting("computercraft:turtle_normal", "AB", { A: "computercraft:computer_normal", B: TE("invar_gear") })
-	// event.recipes.createMechanicalCrafting("computercraft:turtle_advanced", "AB", { A: "computercraft:computer_advanced", B: TE("invar_gear") })
+	event.smithing("computercraft:turtle_normal", "computercraft:computer_normal", TE("invar_gear"))
+	event.smithing("computercraft:turtle_advanced", "computercraft:computer_advanced", TE("invar_gear"))
+	event.recipes.createMechanicalCrafting("computercraft:turtle_normal", "AB", { A: "computercraft:computer_normal", B: TE("invar_gear") })
+	event.recipes.createMechanicalCrafting("computercraft:turtle_advanced", "AB", { A: "computercraft:computer_advanced", B: TE("invar_gear") })
 
-	// event.shaped("computercraft:turtle_advanced", [
-	// 	'SSS',
-	// 	'SMS',
-	// 	'S S'
-	// ], {
-	// 	M: "computercraft:turtle_normal",
-	// 	S: MC('gold_ingot')
-	// })
+	event.shaped("computercraft:turtle_advanced", [
+		'SSS',
+		'SMS',
+		'S S'
+	], {
+		M: "computercraft:turtle_normal",
+		S: MC('gold_ingot')
+	})
 
 	event.recipes.createMechanicalCrafting("forbidden_arcanus:eternal_stella", [
 		'PEEEP',
@@ -929,8 +938,6 @@ function rocketScience(event) {
 	let tank_t1 = "beyond_earth:steel_tank"
 	let failed_engine_t1 = KJ("failed_steel_engine")
 
-	
-
 
 	event.recipes.createMechanicalCrafting("beyond_earth:engine_frame", [
 		' S ',
@@ -973,9 +980,6 @@ function rocketScience(event) {
 		"processingTime": 180,
 		"heatRequirement": "heated"
 	})
-	
-
-
 
 	event.recipes.createMechanicalCrafting("beyond_earth:rocket_fin", [
 		'SS ',
@@ -1020,31 +1024,6 @@ function rocketScience(event) {
 	smithAndMechCraft(tank_t1, CR('fluid_tank'), "alloyed:steel_sheet")
 
 
-
-// 	event.recipes.createMechanicalCrafting("advancedrocketry:guidancecomputer", [
-// 		'AAAAA',
-// 		'ASSSA',
-// 		'GS SG',
-// 		'ASSSA',
-// 		'AAMAA'
-// 	], {
-// 		A: steel,
-// 		M: machine,
-// 		G: gear,
-// 		S: matrix
-// 	})
-
-// 	event.recipes.createMechanicalCrafting("advancedrocketry:fuelingstation", [
-// 		'AAA',
-// 		'GSG',
-// 		'AMA'
-// 	], {
-// 		A: steel,
-// 		M: machine,
-// 		G: gear,
-// 		S: MC("bucket")
-// 	})
-
 	event.recipes.createMechanicalCrafting("beyond_earth:oxygen_loader", [
 		'AAA',
 		'P R',
@@ -1068,13 +1047,6 @@ function rocketScience(event) {
 		'GSG',
 		' A '
 	];
-
-	// event.recipes.createMechanicalCrafting(Item.of("advancedrocketry:spacechest", { outputItems: [{ Slot: 0, id: "advancedrocketry:pressure_tank_high", Count: 1 }], size: 6 }), pattern,
-	// 	{
-	// 		A: steel,
-	// 		G: CR("golden_sheet"),
-	// 		S: CR("copper_backtank")
-	// 	})
 
 	event.recipes.createMechanicalCrafting("beyond_earth:oxygen_mask", pattern,
 		{
@@ -1273,8 +1245,8 @@ function trickierWindmills(event) {
 		'NAN',
 		'SSS'
 	], {
-		A: '#forge:wool',
-		N: 'minecraft:iron_nugget',
+		A: FD('canvas'),
+		N: CR('zinc_nugget'),
 		S: 'minecraft:stick'
 	})
 }
@@ -1371,7 +1343,6 @@ function oreProcessing(event) {
 
 	event.recipes.createCrushing([Item.of("forbidden_arcanus:stellarite_piece", 1), Item.of("forbidden_arcanus:stellarite_piece", 1).withChance(.25), stone], "forbidden_arcanus:stella_arcanum")
 	event.recipes.createCrushing([Item.of("forbidden_arcanus:xpetrified_orb", 2), Item.of("forbidden_arcanus:xpetrified_orb", 1).withChance(.25), stone], "forbidden_arcanus:xpetrified_ore")
-	// event.recipes.createCrushing([Item.of("buddycards:luminis_crystal", 2), Item.of("buddycards:luminis_crystal", 1).withChance(.25), stone], "buddycards:luminis_ore")
 	event.recipes.createCrushing([Item.of("forbidden_arcanus:arcane_crystal", 2), Item.of("forbidden_arcanus:arcane_crystal_dust", 1).withChance(.25), stone], "forbidden_arcanus:arcane_crystal_ore")
 	event.recipes.createCrushing([Item.of(OC("iesnium_dust"), 2), Item.of(OC("iesnium_dust"), 1).withChance(.25), otherstone], OC("iesnium_ore"))
 	event.recipes.createCrushing([Item.of(TE("sapphire"), 2), Item.of(TE("sapphire"), 1).withChance(.25), stone], TE("sapphire_ore"))
@@ -1380,10 +1351,6 @@ function oreProcessing(event) {
 	event.recipes.createMilling(['4x ' + MC('redstone')], TE('cinnabar')).processingTime(700)
 	event.recipes.createCrushing(['6x ' + MC('redstone')], TE('cinnabar')).processingTime(500)
 	event.recipes.thermal.pulverizer(['8x ' + MC('redstone')], TE('cinnabar')).energy(10000)
-
-	// event.recipes.createMilling(['3x ' + MC('glowstone_dust')], 'buddycards:luminis_crystal').processingTime(700)
-	// event.recipes.createCrushing(['6x ' + MC('glowstone_dust')], 'buddycards:luminis_crystal').processingTime(500)
-	// event.recipes.thermal.pulverizer(['9x ' + MC('glowstone_dust')], 'buddycards:luminis_crystal').energy(10000)
 
 	event.recipes.createMilling([TE('sulfur_dust')], TE('sulfur')).processingTime(500)
 	event.recipes.createMilling([TE('niter_dust')], TE('niter')).processingTime(500)
@@ -1734,6 +1701,10 @@ function andesiteMachine(event) {
 	andesite_machine('create:andesite_funnel', 4)
 	andesite_machine('create:andesite_tunnel', 4)
 	andesite_machine('kubejs:pipe_module_utility', 4)
+	andesite_machine(CR('item_vault'), 2, CR('iron_sheet'))
+
+	andesite_machine('toms_storage:ts.storage_terminal', 1, TE('diamond_gear'))
+	event.smithing('toms_storage:ts.crafting_terminal', 'toms_storage:ts.storage_terminal', MC('crafting_table'))
 
 }
 
@@ -2038,7 +2009,7 @@ function explosiveMachine(event){
 		.id('kubejs:explosive_mechanism')
 
 		
-		event.shaped(KJ('explosive_machine'), [
+	event.shaped(KJ('explosive_machine'), [
 			'SSS',
 			'SCS',
 			'SSS'
@@ -2046,6 +2017,8 @@ function explosiveMachine(event){
 		C: 'alloyed:steel_sheet_metal',
 		S: KJ('explosive_mechanism')
 	})
+
+	event.recipes.createCrushing([TE('niter'), MC('sand')], MC('sandstone'))
 
 	let explosive_machine = (id, amount, other_ingredient) => {
 		event.remove({ output: id })
@@ -2057,9 +2030,14 @@ function explosiveMachine(event){
 			event.stonecutting(Item.of(id, amount), 'kubejs:explosive_machine')
 	}
 	
-	// explosiveMachine(BC("cannon_builder"), 1, 'createbigcannons:cast_iron_block')
-	// explosiveMachine('createbigcannons:cannon_drill', 1, TE('drill_head'))
-	// explosiveMachine('createbigcannons:cannon_loader', 1, CR('piston_extension_pole'))
+	explosive_machine(BC("cannon_builder"), 1, 'createbigcannons:cast_iron_block')
+	explosive_machine('createbigcannons:cannon_drill', 1, TE('drill_head'))
+	explosive_machine('createbigcannons:cannon_loader', 1, CR('piston_extension_pole'))
+	explosive_machine(BC("impact_fuze"), 6)
+	explosive_machine(BC("timed_fuze"), 6)
+	explosive_machine(BC("proximity_fuze"), 6)
+	explosive_machine(BC("cannon_mount"), 1, CR('mechanical_bearing'))
+	explosive_machine(BC("yaw_controller"), 1, CR('turntable'))
 
 }
 
@@ -2213,10 +2191,18 @@ function invarMachine(event) {
 		'SCS',
 		'SSS'
 	], {
-		C: KJ('invar_casing'),
+		C: 'createdeco:copper_sheet_metal',
 		S: KJ('power_mechanism')
 	})
 
+	event.shaped(AE2('controller'), [
+		'SSS',
+		'SCS',
+		'SSS'
+	], {
+		C: KJ('fluix_casing'),
+		S: KJ('power_mechanism')
+	})
 
 	let power_machine = (id, amount, other_ingredient) => {
 		event.remove({ output: id })
@@ -2246,6 +2232,35 @@ function invarMachine(event) {
 	power_machine(TE('machine_brewer'), 1, MC('brewing_stand'))
 	power_machine(TE('machine_insolator'), 1, FD('rich_soil'))
 
+	event.remove({output: "createaddition:electric_motor"})
+	event.remove({output: "createaddition:alternator"})
+	event.replaceInput({id: "createaddition:crafting/modular_accumulator"}, "createaddition:capacitor", KJ('electrolytic_capacitor'))
+	event.replaceInput({input: "createaddition:capacitor"}, "createaddition:capacitor", KJ('ceramic_capacitor') )
+
+	event.recipes.createMechanicalCrafting("createaddition:electric_motor", [
+		' BIB ',
+		'BSPSB',
+		' BSB '
+	], {
+		S:"createaddition:copper_spool",
+		B:CR('brass_sheet'),
+		P:TE('machine_frame'),
+		I:"createaddition:iron_rod"
+	})
+
+	event.recipes.createMechanicalCrafting("createaddition:alternator", [
+		' BIB ',
+		'BSPSB',
+		' BSB '
+	], {
+		S:"createaddition:copper_spool",
+		B:BC('cast_iron_ingot'),
+		P:TE('machine_frame'),
+		I:"createaddition:iron_rod"
+	})
+
+
+
 }
 
 function fluixMachine(event) {
@@ -2255,12 +2270,12 @@ function fluixMachine(event) {
 
 	let fluix_machine = (id, amount, other_ingredient) => {
 		event.remove({ output: id })
-		// if (other_ingredient) {
-		// 	event.smithing(Item.of(id, amount), AE2('controller'), other_ingredient)
-		// 	event.recipes.createMechanicalCrafting(Item.of(id, amount), "AB", { A: AE2('controller'), B: other_ingredient })
-		// }
-		// else
-		// 	event.stonecutting(Item.of(id, amount), AE2('controller'))
+		if (other_ingredient) {
+			event.smithing(Item.of(id, amount), AE2('controller'), other_ingredient)
+			event.recipes.createMechanicalCrafting(Item.of(id, amount), "AB", { A: AE2('controller'), B: other_ingredient })
+		}
+		else
+			event.stonecutting(Item.of(id, amount), AE2('controller'))
 	}
 
 	fluix_machine(AE2('condenser'), 1, AE2("fluix_pearl"))
@@ -2283,7 +2298,7 @@ function fluixMachine(event) {
 
 function enderMachine(event) {
 
-	// event.remove({ id: TE("machine/crucible/crucible_ender_pearl") })
+	event.remove({ id: TE("machine/crucible/crucible_ender_pearl") })
 	// event.recipes.createMixing(Fluid.of(TE("ender"), 576), [Fluid.of('tconstruct:molten_silver', 90), Fluid.of('tconstruct:ender_slime', 1000)]).heated()
 
 	event.custom({
@@ -2307,71 +2322,6 @@ function enderMachine(event) {
 		"temperature": 790,
 		"time": 40
 	})
-
-	// event.custom({
-	// 	"type": "tconstruct:casting_table",
-	// 	"cast": { "tag": "tconstruct:casts/multi_use/ingot" },
-	// 	"fluid": {
-	// 		"name": "thermal:ender",
-	// 		"amount": 90
-	// 	},
-	// 	"result": { "item": TE("enderium_ingot") },
-	// 	"cooling_time": 50
-	// })
-
-	// event.custom({
-	// 	"type": "tconstruct:casting_table",
-	// 	"cast": { "tag": "tconstruct:casts/single_use/ingot" },
-	// 	"cast_consumed": true,
-	// 	"fluid": {
-	// 		"name": "thermal:ender",
-	// 		"amount": 90
-	// 	},
-	// 	"result": { "item": TE("enderium_ingot") },
-	// 	"cooling_time": 50
-	// })
-
-	// event.custom({
-	// 	"type": "tconstruct:casting_table",
-	// 	"cast": { "tag": "tconstruct:casts/multi_use/gear" },
-	// 	"fluid": {
-	// 		"name": TE("ender"),
-	// 		"amount": 576
-	// 	},
-	// 	"result": { "item": TE("enderium_gear") },
-	// 	"cooling_time": 114
-	// })
-
-	// event.custom({
-	// 	"type": "tconstruct:casting_table",
-	// 	"cast": { "tag": "tconstruct:casts/single_use/gear" },
-	// 	"cast_consumed": true,
-	// 	"fluid": {
-	// 		"name": TE("ender"),
-	// 		"amount": 576
-	// 	},
-	// 	"result": { "item": TE("enderium_gear") },
-	// 	"cooling_time": 114
-	// })
-
-	// event.recipes.thermal.insolator(['endergetic:tall_poise_bush'], 'endergetic:poise_bush').water(1000)
-	// event.recipes.thermal.insolator(['endergetic:poise_cluster'], 'endergetic:tall_poise_bush').water(1000)
-	// event.recipes.thermal.insolator(['tconstruct:ender_slime_ball', '3x endergetic:poise_bush'], 'endergetic:poise_cluster').water(1000)
-
-	// let t = KJ('incomplete_abstruse_mechanism')
-	// event.recipes.createSequencedAssembly([
-	// 	KJ('abstruse_mechanism'),
-	// ], KJ('inductive_mechanism'), [
-	// 	event.recipes.createDeploying(t, [t, TE('enderium_gear')]),
-	// 	event.recipes.createDeploying(t, [t, TE('enderium_gear')]),
-	// 	event.recipes.createDeploying(t, [t, F('#ender_staffs')])
-	// ]).transitionalItem(t)
-	// 	.loops(1)
-	// 	.id('kubejs:abstruse_mechanism')
-
-	// event.recipes.thermal.smelter(TE("enderium_ingot"), [F("#ingots/silver"), MC("popped_chorus_fruit"), MC("ender_pearl")]).energy(10000)
-	// event.recipes.thermal.smelter(TE("enderium_ingot"), [F("#ingots/silver"), MC("popped_chorus_fruit"), AE2("ender_dust", 4)]).energy(10000)
-	// event.recipes.thermal.smelter(KJ("abstruse_mechanism"), [KJ("inductive_mechanism"), TE("enderium_ingot")]).energy(2000)
 
 	// event.shaped(KJ('enderium_machine'), [
 	// 	'SSS',

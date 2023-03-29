@@ -2,10 +2,10 @@
 	"block.thermal.machine_press": "Exchanger",
 	"block.thermal.machine_sawmill": "Reagent Extractor",
 	"block.thermal.machine_frame": "Power Machine",
-	"info.thermal.machine_press.0": "Exchange coins and items automatically with a bit of power.",
-	"info.thermal.machine_press.1": "Insert the trade card to start trading.",
+	"info.thermal.machine_press.0": "Exchanges items for coin and vice-versa.",
+	"info.thermal.machine_press.1": "Needs a card from the shipment questing",
 	"info.thermal.machine_press.2": "Thank you for your purchase!",
 	"info.thermal.machine_sawmill.0": "Automatically removes Reagents from their glass.",
 	"info.thermal.machine_sawmill.1": "",
-	"info.thermal.machine_sawmill.2": "",
+	"info.thermal.machine_sawmill.2": ""
 }

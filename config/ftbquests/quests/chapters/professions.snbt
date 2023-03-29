@@ -14,7 +14,7 @@
 	default_quest_shape: ""
 	default_hide_dependency_lines: false
 	images: [{
-		x: 10.0d
+		x: 9.5d
 		y: -2.0d
 		width: 21.0d
 		height: 11.0d
@@ -142,7 +142,7 @@
 		}
 		{
 			title: "Full Restock"
-			x: 4.0d
+			x: 6.5d
 			y: 1.0d
 			subtitle: "7 Gold"
 			description: ["A large bread producer needs a quick restock!"]
@@ -163,7 +163,7 @@
 		}
 		{
 			title: "Metalically"
-			x: 4.0d
+			x: 4.5d
 			y: -3.5d
 			subtitle: "16 Silver"
 			description: ["The metal processing plants urge for ores, give them a bit of your mining results."]
@@ -204,7 +204,7 @@
 		}
 		{
 			title: "Metalomania"
-			x: 4.0d
+			x: 4.5d
 			y: -2.0d
 			dependencies: ["1E3E3E5533D245A6"]
 			id: "2547BE1B098305A7"
@@ -238,8 +238,8 @@
 		}
 		{
 			title: "Movie Rating"
-			x: 5.5d
-			y: -3.5d
+			x: 16.0d
+			y: -2.0d
 			description: ["Rotten tomatoes are an essential part of movie rating, imagine if tomatoes never got rotten, what would we throw at them?"]
 			id: "428584CEC8AC19B6"
 			tasks: [{
@@ -257,7 +257,7 @@
 		}
 		{
 			title: "The Flattening"
-			x: 7.0d
+			x: 7.5d
 			y: -3.5d
 			description: [
 				"3 stacks of dirt are surprisingly useful for flattening terrains."
@@ -288,8 +288,8 @@
 		}
 		{
 			title: "Cute Gardening"
-			x: 7.0d
-			y: -2.0d
+			x: 11.5d
+			y: -3.5d
 			description: ["These cute little dripleafs will be perfect on that garden over there."]
 			id: "0F79FC684268C640"
 			tasks: [{
@@ -307,7 +307,7 @@
 		}
 		{
 			title: "Cone Traffic"
-			x: 5.5d
+			x: 13.0d
 			y: -2.0d
 			description: ["The industry demands more traffic cones, increasing cone traffic trains will be safer to ride and less collisions will happen."]
 			id: "36C7F5DE56EABC0A"
@@ -322,6 +322,49 @@
 				type: "item"
 				item: "thermal:gold_coin"
 			}]
+		}
+		{
+			title: "Pesky Arthropods"
+			x: 14.5d
+			y: -3.5d
+			id: "576041A5B3ACFAEF"
+			tasks: [{
+				id: "3A2E5DD8D1B80CB0"
+				type: "kill"
+				icon: "biomesoplenty:spider_egg"
+				entity: "minecraft:spider"
+				value: 50L
+			}]
+			rewards: [{
+				id: "6A260E513210A5EC"
+				type: "item"
+				icon: { id: "thermal:silver_coin", Count: 30b }
+				item: "thermal:silver_coin"
+				count: 30
+			}]
+		}
+		{
+			title: "Meteor Hunter"
+			icon: "ae2:sky_stone_block"
+			x: 4.5d
+			y: 1.0d
+			description: ["You found skystone! Thank you for sharing the location."]
+			id: "50C4475040D2064C"
+			tasks: [
+				{
+					id: "22FF303235CCCE27"
+					type: "observation"
+					icon: "ae2:sky_stone_block"
+					timer: 0L
+					observe_type: 0
+					to_observe: "ae2:sky_stone_block"
+				}
+				{
+					id: "3AE6BF6C610B19B7"
+					type: "checkmark"
+					title: "I Will Share the Location."
+				}
+			]
 		}
 	]
 	quest_links: [ ]

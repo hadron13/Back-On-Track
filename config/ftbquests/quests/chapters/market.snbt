@@ -33,7 +33,7 @@
 			height: 2.0d
 			rotation: 0.0d
 			image: "kubejs:textures/gui/shelf.png"
-			hover: [ ]
+			hover: ["Random Things"]
 			click: ""
 			dev: false
 			corner: false
@@ -58,16 +58,16 @@
 				id: "kubejs:diamond_saw"
 				Count: 1b
 				tag: {
-					HideFlags: 1
+					display: {
+						Name: "{\"text\":\"Enchanted Saw\",\"color\":\"gold\",\"italic\":false}"
+					}
 					Enchantments: [{
 						id: "minecraft:unbreaking"
 						lvl: 10s
 					}]
 					Unbreakable: 1
 					Damage: 0
-					display: {
-						Name: "{\"text\":\"Enchanted Saw\",\"color\":\"gold\",\"italic\":false}"
-					}
+					HideFlags: 1
 				}
 			}
 			x: 1.0d
@@ -104,16 +104,16 @@
 					id: "kubejs:diamond_saw"
 					Count: 1b
 					tag: {
-						display: {
-							Name: "{\"text\":\"Enchanted Diamond Saw\",\"color\":\"gold\",\"italic\":false}"
-						}
+						HideFlags: 1
 						Enchantments: [{
 							lvl: 10s
 							id: "minecraft:unbreaking"
 						}]
 						Unbreakable: 1
 						Damage: 0
-						HideFlags: 1
+						display: {
+							Name: "{\"text\":\"Enchanted Diamond Saw\",\"color\":\"gold\",\"italic\":false}"
+						}
 					}
 				}
 			}]
@@ -124,16 +124,16 @@
 				id: "kubejs:screwdriver"
 				Count: 1b
 				tag: {
-					HideFlags: 1
+					display: {
+						Name: "{\"text\":\"Enchanted Screwdriver\",\"color\":\"gold\",\"italic\":false}"
+					}
 					Enchantments: [{
 						id: "minecraft:unbreaking"
 						lvl: 10s
 					}]
 					Unbreakable: 1
 					Damage: 0
-					display: {
-						Name: "{\"text\":\"Enchanted Screwdriver\",\"color\":\"gold\",\"italic\":false}"
-					}
+					HideFlags: 1
 				}
 			}
 			x: 2.5d
@@ -170,16 +170,16 @@
 					id: "kubejs:screwdriver"
 					Count: 1b
 					tag: {
-						display: {
-							Name: "{\"text\":\"Enchanted Screwdriver\",\"color\":\"gold\",\"italic\":false}"
-						}
+						HideFlags: 1
 						Enchantments: [{
 							lvl: 10s
 							id: "minecraft:unbreaking"
 						}]
 						Unbreakable: 1
 						Damage: 0
-						HideFlags: 1
+						display: {
+							Name: "{\"text\":\"Enchanted Screwdriver\",\"color\":\"gold\",\"italic\":false}"
+						}
 					}
 				}
 			}]
@@ -230,16 +230,16 @@
 					id: "kubejs:soldering_iron"
 					Count: 1b
 					tag: {
-						display: {
-							Name: "{\"text\":\"Enchanted Soldering Iron\",\"color\":\"gold\",\"italic\":false}"
-						}
+						HideFlags: 1
 						Enchantments: [{
 							lvl: 10s
 							id: "minecraft:unbreaking"
 						}]
 						Unbreakable: 1
 						Damage: 0
-						HideFlags: 1
+						display: {
+							Name: "{\"text\":\"Enchanted Soldering Iron\",\"color\":\"gold\",\"italic\":false}"
+						}
 					}
 				}
 			}]
@@ -345,7 +345,11 @@
 				id: "tconstruct:vein_hammer"
 				Count: 1b
 				tag: {
-					Damage: 0
+					tic_multipliers: {
+						"tconstruct:mining_speed": 0.3f
+						"tconstruct:durability": 5.0f
+						"tconstruct:attack_damage": 1.25f
+					}
 					tic_stats: {
 						"tconstruct:attack_damage": 6.8875f
 						"tconstruct:harvest_tier": "minecraft:diamond"
@@ -353,12 +357,13 @@
 						"tconstruct:mining_speed": 2.1923997f
 						"tconstruct:attack_speed": 0.8925f
 					}
-					tic_multipliers: {
-						"tconstruct:mining_speed": 0.3f
-						"tconstruct:durability": 5.0f
-						"tconstruct:attack_damage": 1.25f
-					}
-					tic_broken: 0b
+					Damage: 0
+					tic_materials: [
+						"tconstruct:steel"
+						"tconstruct:steel"
+						"tconstruct:steel"
+						"tconstruct:steel"
+					]
 					tic_modifiers: [
 						{
 							name: "tconstruct:piercing"
@@ -369,12 +374,7 @@
 							level: 4s
 						}
 					]
-					tic_materials: [
-						"tconstruct:steel"
-						"tconstruct:steel"
-						"tconstruct:steel"
-						"tconstruct:steel"
-					]
+					tic_broken: 0b
 					tic_persistent_data: {
 						upgrades: 2
 						abilities: 1
@@ -424,7 +424,7 @@
 			x: 1.0d
 			y: 1.5d
 			shape: "rsquare"
-			description: ["Adopt a cute duck, has chance to come with a partner, refunding this is a sin."]
+			description: ["Adopt a cute little duck! This purchase may come with a surprise partner for your duck too... And refusing it is truly a sin."]
 			id: "346A833FFAEC6050"
 			tasks: [
 				{
@@ -503,10 +503,12 @@
 			]
 		}
 		{
+			title: "Gardener's Delight"
 			icon: "minecraft:poppy"
 			x: 4.0d
 			y: -0.5d
 			shape: "rsquare"
+			subtitle: "15 Silver + Knife"
 			id: "6AF21B60869215D9"
 			tasks: [
 				{
@@ -585,10 +587,12 @@
 			]
 		}
 		{
+			title: "Start-A-Forest"
 			icon: "minecraft:spruce_sapling"
 			x: 5.5d
 			y: -0.5d
 			shape: "rsquare"
+			subtitle: "20 Silver + Axe"
 			id: "294A24F286C7381F"
 			tasks: [
 				{
@@ -644,10 +648,12 @@
 			]
 		}
 		{
+			title: "Quick Salmon"
 			icon: "farmersdelight:grilled_salmon"
 			x: 2.5d
 			y: 1.5d
 			shape: "rsquare"
+			description: ["It's... salmon, and also quick, for when the hunger rings the doorbell."]
 			id: "00512C8698D4A983"
 			tasks: [{
 				id: "4E010320D8963F50"
@@ -663,15 +669,175 @@
 			}]
 		}
 		{
-			x: 4.0d
-			y: 4.0d
+			title: "Destroy-a-Castle Starter Kit"
+			icon: "createbigcannons:solid_shot"
+			x: 7.0d
+			y: -0.5d
 			shape: "rsquare"
+			description: ["So you want to destroy a castle's defences? This kit is just for you, comes with a basic assemble-and-play wrought iron cannon you can bring anywhere, comes with 5 shots."]
 			id: "632AF8573A2BA49E"
+			tasks: [
+				{
+					id: "26C2476AB5D34DD4"
+					type: "item"
+					item: "thermal:silver_coin"
+					count: 25L
+				}
+				{
+					id: "4CB43354A5AD66B2"
+					type: "item"
+					item: "minecraft:iron_ingot"
+					count: 5L
+				}
+			]
+			rewards: [
+				{
+					id: "5FDA5CB6CE2732A7"
+					type: "item"
+					item: "createbigcannons:wrought_iron_cannon_chamber"
+					count: 2
+				}
+				{
+					id: "7D096ABF7EF098A9"
+					type: "item"
+					item: "createbigcannons:wrought_iron_cannon_end"
+				}
+				{
+					id: "31B0549BF63AED54"
+					type: "item"
+					item: "createbigcannons:solid_shot"
+					count: 5
+				}
+				{
+					id: "026F9E6F85106522"
+					type: "item"
+					item: "createbigcannons:powder_charge"
+					count: 5
+				}
+				{
+					id: "299B2F904FA95A27"
+					type: "item"
+					item: "createbigcannons:ram_rod"
+				}
+				{
+					id: "070CD2AF768B882D"
+					type: "item"
+					item: "createbigcannons:cannon_mount"
+				}
+			]
+		}
+		{
+			title: "Defend-a-Castle Starter Pack"
+			icon: {
+				id: "createbigcannons:flak_autocannon_round"
+				Count: 1b
+				tag: { }
+			}
+			x: 8.5d
+			y: -0.5d
+			shape: "rsquare"
+			description: [
+				"Oh, someone is trying to penetrate the castle? This kit is the perfect counter to the Destroy-a-Castle kit."
+				""
+				"This little autocannon can shoot hundreds of shots per minute!"
+				""
+				"Comes with 64 shots, if you have a gunpowder factory this will not cost $40000 per second."
+			]
+			id: "5006737438B42169"
 			tasks: [{
-				id: "40E59C16EAB7C01B"
+				id: "1318EFFD6F502CA8"
 				type: "item"
-				item: "createbigcannons:solid_shot"
+				item: "thermal:silver_coin"
+				count: 25L
 			}]
+			rewards: [
+				{
+					id: "279331C54C33EA85"
+					type: "item"
+					item: "createbigcannons:bronze_autocannon_breech"
+				}
+				{
+					id: "7EA5E7B0041F92AE"
+					type: "item"
+					item: "createbigcannons:bronze_autocannon_barrel"
+					count: 2
+				}
+				{
+					id: "49B7FF9F7A992FF4"
+					type: "item"
+					item: "createbigcannons:filled_autocannon_cartridge"
+					count: 64
+				}
+				{
+					id: "5D97892040AF946F"
+					type: "item"
+					item: {
+						id: "createbigcannons:flak_autocannon_round"
+						Count: 1b
+						tag: { }
+					}
+					count: 64
+				}
+				{
+					id: "1F0C0C2C5C253883"
+					type: "item"
+					item: "createbigcannons:impact_fuze"
+					count: 64
+				}
+			]
+		}
+		{
+			title: "Self Defense Mechanism"
+			x: 4.0d
+			y: 1.5d
+			shape: "rsquare"
+			description: ["This cute cannon may not be able to open a hole in a castle, however it can kill a dragon... And the munition is as cheap as it can get: the food you carry around with you."]
+			id: "72A119B48FA97E82"
+			tasks: [{
+				id: "71D5F854FECDFFC6"
+				type: "item"
+				item: {
+					id: "create:potato_cannon"
+					Count: 1b
+					tag: {
+						Damage: 0
+					}
+				}
+			}]
+		}
+		{
+			title: "Un-Cannon"
+			icon: "create:schematicannon"
+			x: 5.5d
+			y: 1.5d
+			shape: "rsquare"
+			description: [
+				"Is cannon? Check"
+				"Uses gunpowder? Check"
+				"Destroys? Wrong! This cannon is different, it builds things instead of taking them down. "
+				"Use a blueprint, a bit of gunpowder and an inventory on the side to build whatever you want"
+			]
+			id: "5B24ABF49C5FC109"
+			tasks: [{
+				id: "279022175F31D295"
+				type: "item"
+				item: "thermal:silver_coin"
+				count: 15L
+			}]
+			rewards: [
+				{
+					id: "7584AC16BEB051BA"
+					type: "item"
+					item: "create:schematicannon"
+				}
+				{
+					id: "111199E4E7D8D0C1"
+					type: "item"
+					item: "minecraft:gunpowder"
+					count: 3
+					random_bonus: 2
+				}
+			]
 		}
 	]
 	quest_links: [ ]

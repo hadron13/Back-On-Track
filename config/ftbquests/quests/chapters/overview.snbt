@@ -71,7 +71,7 @@
 			description: [
 				"Copper Machines unlock the capability of Fluid Manipulation. Fill, drain, filter and collect liquids for all of your automation needs."
 				""
-				"Note that Sealed Mechanisms are an ingredient to explosive and train mechanisms, but nothing else. The main assembly line will continue with Kinetic Mechanisms."
+				"Note that Pressure Mechanisms are an ingredient to explosive and train mechanisms, but nothing else. The main assembly line will continue with Rotation Mechanisms."
 			]
 			dependencies: [
 				"7D872F933F45809B"
@@ -82,7 +82,7 @@
 				id: "27B07858A6018539"
 				type: "stat"
 				title: "Complete Bonus 1A"
-				icon: "kubejs:sealed_mechanism"
+				icon: "kubejs:pressure_mechanism"
 				disable_toast: true
 				stat: "minecraft:total_world_time"
 				value: 1
@@ -93,13 +93,13 @@
 			icon: "kubejs:scorch_mechanism"
 			disable_toast: true
 			x: -3.5d
-			y: -2.0d
+			y: -1.5d
 			shape: "circle"
 			subtitle: "Secondary"
 			description: [
 				"Zinc Machines are incredibly powerful. From efficient Cobblestone Harvesters to long-ranged Item Collectors, a useful new suite of equipment now sits at the ready."
 				""
-				"Note that Infernal Mechanisms are an ingredient to explosive mechanisms and nothing else. The main assembly line will continue with Precision Mechanisms."
+				"Note that Scorched Mechanisms are an ingredient to mechanisms and nothing else. The main assembly line will continue with Precision Mechanisms."
 			]
 			dependencies: [
 				"7888F9129E9FE517"
@@ -166,7 +166,7 @@
 			shape: "circle"
 			subtitle: "Chapter 2"
 			description: [
-				"The chicken and egg problem remains: in order to automate precision mechanisms for brass equipment more conveniently, having more brass equipment would be really useful!"
+				"So here's the chicken-egg problem: you need brass machinery to automate brass machinery, i guess you will need some manual labor at first."
 				""
 				"After hitting the Checkmark above, the second Chapter of the Factory Guide will become accessible from the Quest Sidebar."
 			]
@@ -185,7 +185,11 @@
 			y: 0.0d
 			shape: "circle"
 			subtitle: "Chapter 4"
-			description: ["After some desh extraction on the moon we are ready to get into new technology"]
+			description: [
+				"After some desh extraction on the moon we are ready to get into new technology"
+				""
+				"After hitting the Checkmark above, the fourth Chapter of the Factory Guide will become accessible from the Quest Sidebar."
+			]
 			dependencies: ["3896A55CE3C8AAD9"]
 			id: "780E8AE86250C73D"
 			tasks: [{
@@ -218,7 +222,7 @@
 		{
 			title: "Mantle Tapping"
 			icon: "minecraft:lava_bucket"
-			x: -5.5d
+			x: -5.0d
 			y: -1.5d
 			shape: "circle"
 			subtitle: "Secondary 2A"
@@ -306,6 +310,11 @@
 			x: -0.5d
 			y: 0.0d
 			subtitle: "Chapter 3A"
+			description: [
+				"... You may use your explosives to assemble a rocket for space exploration, who knows what exciting things are out there..."
+				""
+				"After hitting the Checkmark above, additional Quests located in the Third Chapter will be revealed."
+			]
 			dependencies: ["0BAA1B60B372E283"]
 			id: "2A52615E8E67F885"
 			tasks: [{
@@ -346,8 +355,10 @@
 			y: 0.0d
 			subtitle: "Chapter 3"
 			description: [
-				"We need to go higher!"
-				"Getting explosive mechanisms for rocketry is going too need a lot of gunpowder, after the moon landing what can you do with all of these? cannons of course!"
+				"We need to go Higher!"
+				"This part of the progression will involve seriously dangerous materials that should not be made at home, do not tell the governm..."
+				""
+				"After hitting the Checkmark above, the third Chapter of the Factory Guide will become accessible from the Quest Sidebar."
 			]
 			dependencies: ["69275ECFC147E15B"]
 			id: "466B6AA648B23C3A"
@@ -363,6 +374,7 @@
 			y: 0.0d
 			shape: "square"
 			subtitle: "Milestone"
+			description: ["So we got the new war technology, and it can alse be used for two more things."]
 			dependencies: ["466B6AA648B23C3A"]
 			id: "0BAA1B60B372E283"
 			tasks: [{
@@ -375,9 +387,14 @@
 		}
 		{
 			title: "Train Machinery"
-			x: -4.0d
-			y: 2.0d
+			x: -4.5d
+			y: 1.5d
 			subtitle: "Secondary"
+			description: [
+				"We got Trains!"
+				"This will allow for a new age of descentralization, if you play on a SMP connecting everyone in the track grid is a must!"
+				"Note that Infernal Mechanisms are an ingredient to Train mechanisms and nothing else. The main assembly line will continue with Precision Mechanisms."
+			]
 			dependencies: [
 				"0B2683CCC179B93F"
 				"57EF36B592C45D2C"
@@ -398,12 +415,55 @@
 			x: -6.0d
 			y: 1.5d
 			subtitle: "Secondary 2B"
+			description: [
+				"Trains are the cheapest and fastest way to get stuff moving for long distances, you will need quite a lot of lava to make this happen."
+				""
+				"After hitting the Checkmark above, additional Quests located in the Second Chapter will be revealed."
+			]
 			dependencies: ["69275ECFC147E15B"]
 			id: "57EF36B592C45D2C"
 			tasks: [{
 				id: "721CBD4B8CECEBF9"
 				type: "checkmark"
 				title: "Unlock Secondary 2B"
+			}]
+		}
+		{
+			title: "Sacchariferous Industry"
+			icon: "create:bar_of_chocolate"
+			x: -1.5d
+			y: 1.5d
+			description: [
+				"What to do with explosives next? You can build a rocket.. or make a chocolate factory..."
+				""
+				"Sacchariferous Industry chapter is yet to come, it will cover sugary related automation."
+			]
+			dependencies: ["0BAA1B60B372E283"]
+			id: "141CF17F211E6268"
+			tasks: [{
+				id: "41548D37A6B0BB60"
+				type: "item"
+				title: "Locked"
+				icon: "thermal:lock"
+				item: "kubejs:thing"
+			}]
+		}
+		{
+			title: "Power Machinery"
+			icon: "thermal:machine_frame"
+			x: 5.5d
+			y: 0.0d
+			shape: "square"
+			subtitle: "Milestone"
+			dependencies: ["780E8AE86250C73D"]
+			id: "73CF11A2C0D4A9E5"
+			tasks: [{
+				id: "4B3947CAC6E1D82E"
+				type: "stat"
+				title: "Complete Chapter 4"
+				icon: "kubejs:explosive_mechanism"
+				stat: "minecraft:play_time"
+				value: 1
 			}]
 		}
 	]
