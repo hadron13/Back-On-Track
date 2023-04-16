@@ -20,7 +20,7 @@
 	#The second line of text under the app name
 	state = "Game Starting..."
 	#The Asset ID/URL of the image to display as the large image
-	largeImageKey = ["https://media.forgecdn.net/attachments/thumbnails/628/756/310/172/icon.png"]
+	largeImageKey = ["https://media.forgecdn.net/avatars/thumbnails/792/844/64/64/638150217803358101.png"]
 	#The text that gets displayed when the large image is hovered
 	largeImageText = "It's Create: Back on Track"
 	#The Asset ID/URL of the image to display as the small image
@@ -38,7 +38,7 @@
 	#The second line of text under the app name
 	state = "Chilling in the menu"
 	#The Asset ID/URL of the image to display as the large image
-	largeImageKey = ["https://media.forgecdn.net/attachments/thumbnails/628/756/310/172/icon.png"]
+	largeImageKey = ["https://media.forgecdn.net/avatars/thumbnails/792/844/64/64/638150217803358101.png"]
 	#The text that gets displayed when the large image is hovered
 	largeImageText = "It's Create: Back on Track"
 	#The Asset ID/URL of the image to display as the small image
@@ -56,10 +56,10 @@
 	#The second line of text under the app name
 	state = "Searching for friends"
 	#The Asset ID/URL of the image to display as the large image
-	largeImageKey = ["https://media.forgecdn.net/attachments/thumbnails/628/756/310/172/icon.png"]
+	largeImageKey = ["https://media.forgecdn.net/avatars/thumbnails/792/844/64/64/638150217803358101.png"]
 	#The text that gets displayed when the large image is hovered
 	largeImageText = "It's Create: Back on Track"
-	#The Asset ID/URL of the image to display as the small image
+	###The Asset ID/URL of the image to display as the small image
 	smallImageKey = ["mclogo"]
 	#The text that gets displayed when the small image is hovered
 	smallImageText = "%mods% mods installed"
@@ -92,7 +92,7 @@
 	#The second line of text under the app name
 	state = "Joining Game"
 	#The Asset ID/URL of the image to display as the large image
-	largeImageKey = ["https://media.forgecdn.net/attachments/thumbnails/628/756/310/172/icon.png"]
+	largeImageKey = ["https://media.forgecdn.net/avatars/thumbnails/792/844/64/64/638150217803358101.png"]
 	#The text that gets displayed when the large image is hovered
 	largeImageText = "It's Create: Back on Track"
 	#The Asset ID/URL of the image to display as the small image
@@ -110,7 +110,7 @@
 	#The second line of text under the app name
 	state = "Playing Alone"
 	#The Asset ID/URL of the image to display as the large image
-	largeImageKey = ["https://media.forgecdn.net/attachments/thumbnails/628/756/310/172/icon.png"]
+	largeImageKey = ["https://media.forgecdn.net/avatars/thumbnails/792/844/64/64/638150217803358101.png"]
 	#The text that gets displayed when the large image is hovered
 	largeImageText = "It's Create: Back on Track"
 	#The Asset ID/URL of the image to display as the small image
@@ -128,7 +128,7 @@
 	#The second line of text under the app name
 	state = "Playing online"
 	#The Asset ID/URL of the image to display as the large image
-	largeImageKey = ["https://media.forgecdn.net/attachments/thumbnails/628/756/310/172/icon.png"]
+	largeImageKey = ["https://media.forgecdn.net/avatars/thumbnails/792/844/64/64/638150217803358101.png"]
 	#The text that gets displayed when the large image is hovered
 	largeImageText = "It's Create: Back on Track"
 	#The Asset ID/URL of the image to display as the small image
@@ -162,7 +162,7 @@
 	#The second line of text under the app name
 	state = "here be factories"
 	#The Asset ID/URL of the image to display as the large image
-	largeImageKey = ["https://media.forgecdn.net/attachments/thumbnails/628/756/310/172/icon.png"]
+	largeImageKey = ["https://media.forgecdn.net/avatars/thumbnails/792/844/64/64/638150217803358101.png"]
 	#The text that gets displayed when the large image is hovered
 	largeImageText = "It's Create: Back on Track"
 	#The Asset ID/URL of the image to display as the small image

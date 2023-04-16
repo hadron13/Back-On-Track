@@ -58,7 +58,7 @@
 		{
 			title: "Explosivity 100"
 			icon: "minecraft:gunpowder"
-			x: 0.0d
+			x: -0.5d
 			y: 4.5d
 			description: ["Oldest volatile compound known, it can be used for a variety of purposes."]
 			dependencies: [
@@ -84,7 +84,7 @@
 		{
 			title: "explosivity 600"
 			icon: "createbigcannons:packed_gunpowder"
-			x: 0.0d
+			x: -1.0d
 			y: 6.5d
 			description: ["This packed version is more manageable than using it's dust form."]
 			dependencies: ["6C7AFF61FB05798A"]
@@ -106,7 +106,7 @@
 		{
 			title: "Desert Generator"
 			icon: "minecraft:sand"
-			x: 3.5d
+			x: 4.0d
 			y: 1.5d
 			description: ["With the invent of crushing wheels sand can now be automated"]
 			dependencies: ["218397419487B197"]
@@ -129,7 +129,7 @@
 			title: "Packing the Desert"
 			icon: "minecraft:sandstone"
 			x: 2.5d
-			y: 3.0d
+			y: 2.0d
 			description: ["Packing it somehow creates niter from thin air."]
 			dependencies: ["631E60CEDA707586"]
 			id: "03A6353EE55D277A"
@@ -204,9 +204,9 @@
 		{
 			title: "Igneous Fabrication"
 			icon: "minecraft:cobblestone"
-			x: 3.5d
-			y: -1.0d
-			description: ["Cobblestone production is now much easier with zinc machinery"]
+			x: 5.5d
+			y: -0.5d
+			description: ["Cobblestone production is now much easier with zinc machinery."]
 			hide_dependency_lines: true
 			dependencies: ["278B95FF7159DCFC"]
 			id: "0A39053F99978A28"
@@ -227,10 +227,10 @@
 		{
 			title: "More De-chunkification"
 			icon: "minecraft:gravel"
-			x: 4.5d
-			y: 0.0d
+			x: 6.0d
+			y: 1.0d
 			description: [
-				"But now the target is niter."
+				"But now you'll need it for niter too."
 				""
 				"And don't forget that brass machinery is much more efficient for this."
 			]
@@ -345,7 +345,7 @@
 			title: "Nitric"
 			icon: "thermal:niter"
 			x: 1.5d
-			y: 4.0d
+			y: 3.5d
 			description: ["Here you got the niter"]
 			dependencies: ["03A6353EE55D277A"]
 			id: "123439484762E75A"
@@ -371,6 +371,7 @@
 			dependencies: [
 				"5200D0297F0DE8B1"
 				"6ACE3593A299DEBC"
+				"0A75C53447F4FB07"
 			]
 			id: "5FFB68365F2E821B"
 			tasks: [
@@ -390,8 +391,8 @@
 		{
 			title: "Ignitive Rotors"
 			icon: "thermal:iron_gear"
-			x: 2.0d
-			y: 7.5d
+			x: 2.5d
+			y: 8.0d
 			description: ["Friction is the key."]
 			dependencies: ["66DE843907A608E0"]
 			id: "6ACE3593A299DEBC"
@@ -412,8 +413,8 @@
 		{
 			title: "Ironic"
 			icon: "minecraft:iron_ingot"
-			x: 3.5d
-			y: 5.5d
+			x: 5.0d
+			y: 6.5d
 			description: ["Reuse your iron, this entire chapter is about recycling."]
 			hide_dependency_lines: false
 			dependencies: ["65605AC13DF2D359"]
@@ -667,7 +668,7 @@
 			title: "The Rock-et"
 			icon: "grapplemod:rocketupgradeitem"
 			x: 0.0d
-			y: 17.5d
+			y: 17.0d
 			description: ["This unrealistic rocket will lead you to the moon, but you need to pack some stuff before departing..."]
 			dependencies: [
 				"2A52615E8E67F885"
@@ -899,15 +900,96 @@
 			]
 		}
 		{
-			x: 4.5d
+			title: "Ferrically"
+			x: 5.0d
 			y: 3.5d
 			dependencies: ["218397419487B197"]
 			id: "65605AC13DF2D359"
-			tasks: [{
-				id: "1116AAA2F1D31918"
-				type: "item"
-				item: "minecraft:iron_nugget"
-			}]
+			tasks: [
+				{
+					id: "1116AAA2F1D31918"
+					type: "item"
+					item: "minecraft:iron_nugget"
+				}
+				{
+					id: "2498ABCFB227BF1F"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			title: "Get Molten"
+			icon: {
+				id: "tconstruct:copper_can"
+				Count: 1b
+				tag: {
+					fluid: "tconstruct:molten_iron"
+				}
+			}
+			x: 3.0d
+			y: 4.5d
+			description: ["Route the nuggets once more into your High-Temperature melting equipment. A Melter from Tinkers' Construct, for example."]
+			dependencies: ["65605AC13DF2D359"]
+			id: "3F0207FF17AA3496"
+			tasks: [
+				{
+					id: "35656474DD8D488B"
+					type: "item"
+					title: "Copper Can (Molten Iron)"
+					item: {
+						id: "tconstruct:copper_can"
+						Count: 1b
+						tag: {
+							fluid: "tconstruct:molten_iron"
+						}
+					}
+					consume_items: false
+				}
+				{
+					id: "54F707625C099697"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			title: "Get Steely"
+			icon: {
+				id: "tconstruct:copper_can"
+				Count: 1b
+				tag: {
+					fluid: "createbigcannons:molten_steel"
+				}
+			}
+			x: 1.0d
+			y: 6.0d
+			description: ["Mix it up with carbon and that will create steel, the essential alloy of this chapter."]
+			dependencies: [
+				"4C99F5F60ABE2DFD"
+				"3F0207FF17AA3496"
+			]
+			id: "0A75C53447F4FB07"
+			tasks: [
+				{
+					id: "5A21ED46AE34212D"
+					type: "item"
+					title: "Copper Can (Molten Iron)"
+					item: {
+						id: "tconstruct:copper_can"
+						Count: 1b
+						tag: {
+							fluid: "createbigcannons:molten_steel"
+						}
+					}
+					consume_items: false
+				}
+				{
+					id: "0AF1E50D7A90F444"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
 		}
 	]
 	quest_links: [ ]

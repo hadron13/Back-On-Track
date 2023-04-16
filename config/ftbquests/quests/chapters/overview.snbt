@@ -12,7 +12,7 @@
 			title: "Andesite Machinery"
 			icon: "kubejs:rotation_mechanism"
 			disable_toast: true
-			x: -10.5d
+			x: -10.0d
 			y: 0.0d
 			shape: "square"
 			subtitle: "Milestone"
@@ -38,7 +38,7 @@
 		}
 		{
 			title: "Brass Machinery"
-			x: -6.5d
+			x: -6.0d
 			y: 0.0d
 			shape: "square"
 			subtitle: "Milestone"
@@ -65,7 +65,7 @@
 			title: "Copper Machinery"
 			icon: "kubejs:pressure_mechanism"
 			disable_toast: true
-			x: -8.5d
+			x: -8.0d
 			y: -2.0d
 			subtitle: "Secondary"
 			description: [
@@ -92,7 +92,7 @@
 			title: "Zinc Machinery"
 			icon: "kubejs:scorch_mechanism"
 			disable_toast: true
-			x: -3.5d
+			x: -3.0d
 			y: -1.5d
 			shape: "circle"
 			subtitle: "Secondary"
@@ -161,7 +161,7 @@
 		{
 			title: "Overengineered Cookie Cutter"
 			icon: "create:electron_tube"
-			x: -8.5d
+			x: -8.0d
 			y: 0.0d
 			shape: "circle"
 			subtitle: "Chapter 2"
@@ -181,7 +181,7 @@
 		{
 			title: "Power Processing"
 			icon: "kubejs:power_mechanism"
-			x: 3.5d
+			x: 4.0d
 			y: 0.0d
 			shape: "circle"
 			subtitle: "Chapter 4"
@@ -201,7 +201,7 @@
 		{
 			title: "Rubber Tycoon"
 			icon: "thermal:cured_rubber"
-			x: -10.0d
+			x: -9.5d
 			y: -1.5d
 			shape: "circle"
 			subtitle: "Secondary 1A"
@@ -222,7 +222,7 @@
 		{
 			title: "Mantle Tapping"
 			icon: "minecraft:lava_bucket"
-			x: -5.0d
+			x: -4.5d
 			y: -1.5d
 			shape: "circle"
 			subtitle: "Secondary 2A"
@@ -307,7 +307,7 @@
 		{
 			title: "Rocketry by Eye"
 			icon: "beyond_earth:steel_engine"
-			x: -0.5d
+			x: 0.0d
 			y: 0.0d
 			subtitle: "Chapter 3A"
 			description: [
@@ -326,7 +326,7 @@
 		{
 			title: "To the Moon!"
 			icon: "beyond_earth:moon_globe"
-			x: 1.5d
+			x: 2.0d
 			y: 0.0d
 			shape: "hexagon"
 			subtitle: "Milestone"
@@ -351,7 +351,7 @@
 		{
 			title: "Astounding Explosions"
 			icon: "createbigcannons:packed_gunpowder"
-			x: -4.5d
+			x: -4.0d
 			y: 0.0d
 			subtitle: "Chapter 3"
 			description: [
@@ -370,16 +370,20 @@
 		}
 		{
 			title: "Explosive Machinery"
-			x: -2.5d
+			x: -2.0d
 			y: 0.0d
 			shape: "square"
 			subtitle: "Milestone"
 			description: ["So we got the new war technology, and it can alse be used for two more things."]
-			dependencies: ["466B6AA648B23C3A"]
+			dependencies: [
+				"466B6AA648B23C3A"
+				"6E7750CE254894B4"
+			]
 			id: "0BAA1B60B372E283"
 			tasks: [{
 				id: "25D9F75B44333CD1"
 				type: "stat"
+				title: "Complete Chapter 3"
 				icon: "kubejs:explosive_mechanism"
 				stat: "minecraft:play_time"
 				value: 1
@@ -387,7 +391,7 @@
 		}
 		{
 			title: "Train Machinery"
-			x: -4.5d
+			x: -4.0d
 			y: 1.5d
 			subtitle: "Secondary"
 			description: [
@@ -412,7 +416,7 @@
 		{
 			title: "Sturdy Production"
 			icon: "create:sturdy_sheet"
-			x: -6.0d
+			x: -5.5d
 			y: 1.5d
 			subtitle: "Secondary 2B"
 			description: [
@@ -431,7 +435,7 @@
 		{
 			title: "Sacchariferous Industry"
 			icon: "create:bar_of_chocolate"
-			x: -1.5d
+			x: -1.0d
 			y: 1.5d
 			description: [
 				"What to do with explosives next? You can build a rocket.. or make a chocolate factory..."
@@ -451,7 +455,7 @@
 		{
 			title: "Power Machinery"
 			icon: "thermal:machine_frame"
-			x: 5.5d
+			x: 6.0d
 			y: 0.0d
 			shape: "square"
 			subtitle: "Milestone"

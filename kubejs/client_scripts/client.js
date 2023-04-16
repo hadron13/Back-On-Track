@@ -12,16 +12,7 @@ onEvent('jei.hide.fluids', event => {
 })
 
 onEvent('jei.add.items', event => {
-	event.add('thermal:ruby')
-	event.add('thermal:ruby_dust')
-	event.add('thermal:ruby_ore')
-	event.add('thermal:deepslate_ruby_ore')
-	event.add('thermal:apatite_ore')
-	event.add('thermal:deepslate_apatite_ore')
-	event.add('thermal:sapphire')
-	event.add('thermal:sapphire_dust')
-	event.add('thermal:sapphire_ore')
-	event.add('thermal:deepslate_sapphire_ore')
+
 })
 
 onEvent('jei.remove.categories', event => {
@@ -51,8 +42,8 @@ onEvent('item.tooltip', tooltip => {
 	ore("thermal:nickel_ore", -40, 20)
 	ore("thermal:deepslate_nickel_ore", -40, 20)
 
-	ore("thermal:ruby_ore", 1, 30)
-	ore("thermal:sapphire_ore", 1, 30)
+	// ore("thermal:ruby_ore", 1, 30)
+	// ore("thermal:sapphire_ore", 1, 30)
 	ore("thermal:lead_ore", -60, 10)
 	ore("thermal:deepslate_lead_ore", -60, 10)
 	// ore("minecraft:emerald_ore", 1, 30)
@@ -78,10 +69,11 @@ onEvent('item.tooltip', tooltip => {
 	main_assembly('create:precision_mechanism', "2")
 	bonus_assembly('kubejs:scorch_mechanism', "2A")
 	bonus_assembly('kubejs:train_mechanism', "2B")
-	bonus_assembly('kubejs:explosive_mechanism', "3")
-	main_assembly('kubejs:inductive_mechanism', "4")
-	bonus_assembly('kubejs:abstruse_mechanism', "4A")
-	main_assembly('kubejs:calculation_mechanism', "5")
+	main_assembly('kubejs:explosive_mechanism', "3")
+	// main_assembly('kubejs:inductive_mechanism', "4")
+	main_assembly('kubejs:power_mechanism', "4")
+	// bonus_assembly('kubejs:abstruse_mechanism', "4A")
+	// main_assembly('kubejs:calculation_mechanism', "5")
 
 	not_consumed('kubejs:stone_saw')
 	not_consumed('kubejs:iron_saw')

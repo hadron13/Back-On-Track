@@ -14,8 +14,8 @@
 	default_quest_shape: ""
 	default_hide_dependency_lines: false
 	images: [{
-		x: 9.5d
-		y: -2.0d
+		x: 10.0d
+		y: -1.5d
 		width: 21.0d
 		height: 11.0d
 		rotation: 0.0d
@@ -44,7 +44,7 @@
 			title: "Investors are Investing"
 			icon: "minecraft:book"
 			x: 2.5d
-			y: -4.0d
+			y: -3.5d
 			subtitle: "30 Silver"
 			description: [
 				"Write an application telling how will your organization change the world."
@@ -86,6 +86,7 @@
 				id: "186F15C15373C885"
 				type: "item"
 				item: "beyond_earth:glacio_globe"
+				consume_items: true
 			}]
 			rewards: [{
 				id: "1C0512EE817937AC"
@@ -97,7 +98,7 @@
 		{
 			title: "Blood Donation"
 			x: 8.5d
-			y: -2.0d
+			y: -1.5d
 			subtitle: "10 Silver"
 			description: ["Donate that goofy blood you leave in your smeltery"]
 			id: "17EAB8633782ADD9"
@@ -133,6 +134,7 @@
 					Count: 1b
 					tag: { }
 				}
+				consume_items: true
 			}]
 			rewards: [{
 				id: "3CF028056F7AE881"
@@ -145,7 +147,7 @@
 		{
 			title: "Full Restock"
 			x: 6.5d
-			y: -2.0d
+			y: -1.5d
 			subtitle: "7 Gold"
 			description: ["A large bread producer needs a quick restock!"]
 			id: "2421E3B7BABCD7B1"
@@ -154,6 +156,7 @@
 				type: "item"
 				item: "minecraft:hay_block"
 				count: 512L
+				consume_items: true
 			}]
 			rewards: [{
 				id: "587C2549924ECA48"
@@ -166,7 +169,7 @@
 		{
 			title: "Metalically"
 			x: 4.5d
-			y: -4.0d
+			y: -3.5d
 			subtitle: "16 Silver"
 			description: ["The metal processing plants urge for ores, give them a bit of your mining results."]
 			id: "1E3E3E5533D245A6"
@@ -176,24 +179,28 @@
 					type: "item"
 					item: "minecraft:raw_iron"
 					count: 10L
+					consume_items: true
 				}
 				{
 					id: "57F6CB4D244CF5D2"
 					type: "item"
 					item: "minecraft:raw_copper"
 					count: 10L
+					consume_items: true
 				}
 				{
 					id: "6D6A776D91D97BF9"
 					type: "item"
 					item: "minecraft:raw_gold"
 					count: 10L
+					consume_items: true
 				}
 				{
 					id: "247DC267AB580217"
 					type: "item"
 					item: "create:raw_zinc"
 					count: 10L
+					consume_items: true
 				}
 			]
 			rewards: [{
@@ -207,7 +214,8 @@
 		{
 			title: "Metalomania"
 			x: 4.5d
-			y: -2.0d
+			y: -1.5d
+			subtitle: "24 Silver"
 			description: ["Fancier metals require fancier rewards."]
 			dependencies: ["1E3E3E5533D245A6"]
 			id: "2547BE1B098305A7"
@@ -217,18 +225,21 @@
 					type: "item"
 					item: "thermal:raw_lead"
 					count: 10L
+					consume_items: true
 				}
 				{
 					id: "1D0AEB2D020E534E"
 					type: "item"
 					item: "tconstruct:raw_cobalt"
 					count: 10L
+					consume_items: true
 				}
 				{
 					id: "1B09B5AD47B03DBE"
 					type: "item"
 					item: "thermal:raw_nickel"
 					count: 10L
+					consume_items: true
 				}
 			]
 			rewards: [{
@@ -241,8 +252,9 @@
 		}
 		{
 			title: "Movie Rating"
-			x: 13.0d
-			y: -5.5d
+			x: 6.5d
+			y: 0.5d
+			subtitle: "5 Silver"
 			description: ["Rotten tomatoes are an essential part of movie rating, imagine if tomatoes never got rotten, what would we throw at them?"]
 			id: "428584CEC8AC19B6"
 			tasks: [{
@@ -250,6 +262,7 @@
 				type: "item"
 				item: "farmersdelight:rotten_tomato"
 				count: 20L
+				consume_items: true
 			}]
 			rewards: [{
 				id: "556A936662487411"
@@ -261,7 +274,8 @@
 		{
 			title: "The Flattening"
 			x: 6.5d
-			y: -4.0d
+			y: -3.5d
+			subtitle: "7 Silver"
 			description: [
 				"3 stacks of dirt are surprisingly useful for flattening terrains."
 				""
@@ -288,19 +302,36 @@
 					count: 64L
 				}
 			]
+			rewards: [{
+				id: "6768D6E415DF490A"
+				type: "item"
+				item: "thermal:silver_coin"
+				count: 7
+			}]
 		}
 		{
 			title: "Cute Gardening"
 			x: 8.5d
-			y: -4.0d
-			description: ["These cute little dripleafs will be perfect on that garden over there."]
+			y: -3.5d
+			subtitle: "5 Silver"
+			description: ["These cute little dripleafs and those clovers will be perfect on that garden over there."]
 			id: "0F79FC684268C640"
-			tasks: [{
-				id: "40C155A8A71D305D"
-				type: "item"
-				item: "minecraft:small_dripleaf"
-				count: 8L
-			}]
+			tasks: [
+				{
+					id: "40C155A8A71D305D"
+					type: "item"
+					item: "minecraft:small_dripleaf"
+					count: 8L
+					consume_items: true
+				}
+				{
+					id: "3B63A399C313767A"
+					type: "item"
+					item: "biomesoplenty:clover"
+					count: 5L
+					consume_items: true
+				}
+			]
 			rewards: [{
 				id: "49408BEFEFB53485"
 				type: "item"
@@ -310,8 +341,9 @@
 		}
 		{
 			title: "Cone Traffic"
-			x: 15.0d
-			y: -5.5d
+			x: 8.5d
+			y: 0.5d
+			subtitle: "1 Gold"
 			description: ["The industry demands more traffic cones, increasing cone traffic trains will be safer to ride and less collisions will happen."]
 			id: "36C7F5DE56EABC0A"
 			tasks: [{
@@ -319,6 +351,7 @@
 				type: "item"
 				item: "createbigcannons:traffic_cone"
 				count: 10L
+				consume_items: true
 			}]
 			rewards: [{
 				id: "160A057BF64BD43E"
@@ -329,7 +362,8 @@
 		{
 			title: "Pesky Arthropods"
 			x: 2.5d
-			y: -2.0d
+			y: -1.5d
+			description: ["Kill those pesky spiders from this land and receive a bounty for that."]
 			id: "576041A5B3ACFAEF"
 			tasks: [{
 				id: "3A2E5DD8D1B80CB0"
@@ -349,13 +383,15 @@
 		{
 			title: "Meteor Hunter"
 			icon: "ae2:sky_stone_block"
-			x: 11.0d
-			y: -5.5d
-			description: ["You found skystone! Thank you for sharing the location."]
+			x: 4.5d
+			y: 0.5d
+			subtitle: "10 Silver"
+			description: ["So you found some skystone? Thank's for your collaboration."]
 			id: "50C4475040D2064C"
 			tasks: [{
 				id: "22FF303235CCCE27"
 				type: "observation"
+				title: "Find Skystone"
 				icon: "ae2:sky_stone_block"
 				timer: 0L
 				observe_type: 0
@@ -367,6 +403,79 @@
 				item: "thermal:silver_coin"
 				count: 10
 			}]
+		}
+		{
+			title: "Willy Deals"
+			x: 2.5d
+			y: 0.5d
+			subtitle: "35 Silver"
+			description: ["Who wouldn't want these delicious treats? Submit some to get a nice reward for it."]
+			id: "553CBFEE1FF3773A"
+			tasks: [
+				{
+					id: "13304256BEBDBA00"
+					type: "item"
+					item: "create:bar_of_chocolate"
+					count: 30L
+					consume_items: true
+				}
+				{
+					id: "7006CA92CBABCB80"
+					type: "item"
+					item: "create_confectionery:chocolate_glazed_marshmallow"
+					count: 20L
+					consume_items: true
+				}
+				{
+					id: "4A7F031458B48CE0"
+					type: "item"
+					item: "create_confectionery:black_chocolate_glazed_berries"
+					count: 20L
+					consume_items: true
+				}
+			]
+			rewards: [{
+				id: "2D0AE8A50A861041"
+				type: "item"
+				icon: { id: "thermal:silver_coin", Count: 35b }
+				item: "thermal:silver_coin"
+				count: 35
+			}]
+		}
+		{
+			title: "Burkalish Business"
+			icon: "thermal:crude_oil_bucket"
+			x: 2.5d
+			y: 2.5d
+			subtitle: "25 Silver"
+			description: [
+				"OIL!"
+				"Oil is probably the most valuable thing you can find in deposits thrown under some slabs, guess you can sell that to the Burkalish."
+			]
+			can_repeat: true
+			id: "4F9F57C3FD28F79E"
+			tasks: [{
+				id: "76C530203910856C"
+				type: "fluid"
+				fluid: "kubejs:flowing_crude_oil"
+				amount: 30000L
+			}]
+			rewards: [
+				{
+					id: "7A2C9E1FE53E31BB"
+					type: "item"
+					icon: { id: "thermal:silver_coin", Count: 25b }
+					item: "thermal:silver_coin"
+					count: 25
+				}
+				{
+					id: "7E2A291D2FD71E8B"
+					type: "toast"
+					title: "Repeatable"
+					icon: "thermal:machine_cycle_augment"
+					description: ""
+				}
+			]
 		}
 	]
 	quest_links: [ ]

@@ -31,26 +31,6 @@ onEvent('item.registry', event => {
 		event.create('incomplete_' + e + '_processor', 'create:sequenced_assembly').texture('kubejs:item/incomplete_' + e + '_processor').displayName('Incomplete ' + name + ' Processor')
 	})
 
-	let number = (name) => {
-		let id = name.toLowerCase()
-		event.create(id).texture("kubejs:item/" + id).glow(true).displayName(name)
-	}
-
-	number('Zero')
-	number('One')
-	number('Two')
-	number('Three')
-	number('Four')
-	number('Five')
-	number('Six')
-	number('Seven')
-	number('Eight')
-	number('Nine')
-	number('Plus')
-	number('Minus')
-	number('Multiply')
-	number('Divide')
-
 	let mechanism = (name, rarity) => {
 		let id = name.toLowerCase()
 		event.create(id + '_mechanism').texture("kubejs:item/" + id + "_mechanism").displayName(name + ' Mechanism').rarity(rarity ? rarity : RARITY_COMMON)
@@ -76,8 +56,6 @@ onEvent('item.registry', event => {
 	event.create('failed_steel_engine').texture("kubejs:item/failed_engine_t1").displayName('Failed Brass Engine')
 
 	event.create('circuit_scrap').texture("kubejs:item/circuit_scrap").displayName('Circuit Scrap')
-	// event.create('charged_calculator').texture("kubejs:item/charged_calculator").displayName('Calculator').maxDamage(64)
-	// event.create('missingno').texture("kubejs:item/missingno").displayName('∄')
 	event.create('zinc_dust').texture("kubejs:item/zinc_dust").displayName('Zinc Dust')
 
 	event.create('asurine_bits').texture("kubejs:item/asurine_bits").displayName('Asurine Chunks')
@@ -129,6 +107,10 @@ onEvent('item.registry', event => {
 	event.create('screwdriver').texture("kubejs:item/screwdriver").displayName('Screwdriver').maxDamage(512)
 	event.create('soldering_iron').texture("kubejs:item/soldering_iron").displayName('Soldering Iron').maxDamage(1024)
 
+	event.create('golden_tube').texture("kubejs:item/yellow_tube").displayName("Golden Tube")
+	event.create('diamond_tube').texture("kubejs:item/blue_tube").displayName("Diamond Tube")
+	event.create('empty_tube').texture("kubejs:item/empty_tube").displayName("Empty Tube")
+
 
 	// event.create('alchemical_laser').parentModel("kubejs:block/ponder_laser_lamp_on").displayName('Alchemical Laser (Ponder Entry)').unstackable()
 	event.create('thermal_cast').texture("kubejs:item/thermal_cast").displayName('Thermal Cast').unstackable()
@@ -147,24 +129,24 @@ onEvent('block.registry', event => {
 
 	event.create('mica_block').material('metal').hardness(3.0).displayName('Mica Block')
 
-	let machine = (name, layer) => {
+	let machine = (name, display, layer) => {
 		let id = name.toLowerCase()
 		event.create(id + '_machine')
 			.model('kubejs:block/' + id + '_machine')
 			.material('lantern')
 			.hardness(3.0)
-			.displayName(name + ' Machine')
+			.displayName(display + ' Machine')
 			.notSolid()
 			.renderType(layer)
 	}
 
-	machine('Andesite', "solid")
-	machine('Brass', "translucent")
-	machine('Copper', "cutout")
-	machine('Zinc', "cutout")
-	machine('Train', "cutout")
-	machine('Explosive', "solid")
-	machine('Enderium', "cutout")
+	machine('Andesite', 'Rotation', "solid")
+	machine('Brass', 'Precision',"translucent")
+	machine('Copper', 'Pressure', "cutout")
+	machine('Zinc', 'Scorch',"cutout")
+	machine('Train', 'Track', "cutout")
+	machine('Explosive', 'Explosive', "solid")
+	machine('Enderium', 'Abstruse',"cutout")
 
 	for (let i = 0; i < 15; i++)
 		event.create(`failed_alchemy_${i}`)
@@ -371,6 +353,8 @@ onEvent('fluid.registry', event => {
 })
 
 onEvent('item.modification', event => {
+	event.modify('beyond_earth:hammer', item => {item.maxDamage = 50})
+	
 	let colors = ["red", "yellow", "green", "blue", "magenta", "black"]
 	colors.forEach(element => {
 		event.modify('ae2:' + element + '_paint_ball', item => {

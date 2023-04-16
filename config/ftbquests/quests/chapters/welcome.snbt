@@ -28,6 +28,7 @@
 			rewards: [{
 				id: "4A3FCD2DE18942C2"
 				type: "item"
+				team_reward: false
 				item: "minecraft:diamond"
 			}]
 		}
@@ -75,6 +76,7 @@
 				{
 					id: "5E25579BE5AA493F"
 					type: "item"
+					team_reward: false
 					item: {
 						id: "minecraft:player_head"
 						Count: 1b
@@ -100,6 +102,7 @@
 				{
 					id: "79ED137F4E0248BA"
 					type: "item"
+					team_reward: false
 					item: {
 						id: "minecraft:player_head"
 						Count: 1b
@@ -125,6 +128,7 @@
 				{
 					id: "132ADF5DB05DD6F1"
 					type: "item"
+					team_reward: false
 					item: {
 						id: "minecraft:player_head"
 						Count: 1b
@@ -152,13 +156,14 @@
 					type: "loot"
 					title: "Purple"
 					icon: "ftbquests:missing_item"
+					team_reward: false
 					exclude_from_claim_all: true
 					table_id: 5221089518311498847L
 				}
 			]
 		}
 		{
-			title: "Pure Death"
+			title: "Genb Hype Follower"
 			x: 3.0d
 			y: 3.0d
 			shape: "hexagon"
@@ -176,6 +181,7 @@
 			rewards: [{
 				id: "766F72D73A383539"
 				type: "item"
+				auto: "enabled"
 				item: {
 					id: "minecraft:player_head"
 					Count: 1b
@@ -187,13 +193,13 @@
 								-1399788231
 								-658093184
 							]
-							Name: "generikb"
 							Properties: {
 								textures: [{
 									Value: "ewogICJ0aW1lc3RhbXAiIDogMTY3Nzg4NjkyOTYzMSwKICAicHJvZmlsZUlkIiA6ICI5NjZlYmI2OWE2M2Q0YmIyYWM5MGVkMzlkOGM2NGI4MCIsCiAgInByb2ZpbGVOYW1lIiA6ICJnZW5lcmlrYiIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9mNDJjOTFhZmU4YTA0ODg1NDA4YWUwMGExZTIwNmQ0M2RhNDBjNzU5NWFkMWY1YTA1MWI0NGM4YzdjYTZjYmUxIgogICAgfQogIH0KfQ=="
 									Signature: "wd6IHxwa7uiYrg4KWW34OaEeJuUF2UrPyhfaWkLdaguZ26nK2h5k+EKFzSPTkpP0s+xo4TVYUdYhNL6RmAGvlQD2IoY1jSA5GQTugu18r18718cXvf8MOhJqKHUBqQw6RWwNSWzsE0lov9M6Uv0Hc3tGOg9STmlE3G6oWI7d6lmDxcPH0fY98vAlwIcduW8/gPmIEmTAluFw8tgkvEwFGT86vsiWO4Qg9nJmKz2EeWLyzb0WO7hb//gRiYg4/C8D+gmDVMYQvYT7xw2D2SzO32NnL8vEIF9N5jjbqUMzpHrkLeYpdQckwryXxnfaZM+tfRX6meZXJEJhnHeTAVwOpxOE1kPpHQASzGGh89cmTi78xWdGhzstvzmF2/09LRdf5ypL7GDFY+LH/QSZuXBMI2CUJYtmGXQU7TeuxvTZ72pbPL0Ued5K0oiTz0Oh3d32BLuSjkFpTb6Ex+rOTzsOdRuBxvxNgG11pRZcmpmR06pyU0DDzj8uWZENJGyuUh2PACWLrqOfQXEcJeMSdvMSQAqaYExC9qg+SJukwWldkegPDs75U0K+9ENEqA+j6qWI4MR5/4ua0qT3NYqoI2YnBsp9lvJWUZKPX01UV7PJZqXm3T4GDAgDhWgewPczmGeRBGZ52l9Q6Pqq7nehnrWMU4Tn47czm0T0gHfh9Fh38Os="
 								}]
 							}
+							Name: "generikb"
 						}
 					}
 				}
@@ -220,11 +226,13 @@
 			rewards: [{
 				id: "42BEC9367C4C41BB"
 				type: "item"
+				team_reward: false
 				item: "create:wrench"
 			}]
 		}
 		{
 			title: "Firstly"
+			icon: "minecraft:andesite"
 			x: 1.5d
 			y: 0.0d
 			shape: "pentagon"
@@ -237,20 +245,21 @@
 			size: 1.5d
 			id: "1F5C05BC686C75B7"
 			tasks: [{
-				id: "4C62F79AF50FA0D6"
-				type: "item"
-				item: "minecraft:andesite"
+				id: "38099B0180742ADA"
+				type: "checkmark"
 			}]
 			rewards: [{
 				id: "4C9A4951D47CE9D3"
 				type: "item"
-				item: "kubejs:andesite_dust"
+				team_reward: false
+				item: "kubejs:andesite_blend"
 				count: 7
 				random_bonus: 3
 			}]
 		}
 		{
 			title: "Secondly"
+			icon: "create:andesite_alloy"
 			x: 0.0d
 			y: 1.5d
 			shape: "hexagon"
@@ -262,13 +271,13 @@
 			size: 1.5d
 			id: "5E6A1F7FDEEB3053"
 			tasks: [{
-				id: "58A13F36F08C173C"
-				type: "item"
-				item: "create:andesite_alloy"
+				id: "4F176EBDA33A01CB"
+				type: "checkmark"
 			}]
 			rewards: [{
 				id: "46ABC266496D67EC"
 				type: "item"
+				team_reward: false
 				item: "create:andesite_alloy"
 				count: 5
 				random_bonus: 3
@@ -276,6 +285,7 @@
 		}
 		{
 			title: "Thirdly"
+			icon: "create:cogwheel"
 			x: -1.5d
 			y: 3.0d
 			shape: "octagon"
@@ -284,19 +294,26 @@
 			size: 1.5d
 			id: "7A7E7AF244BF2259"
 			tasks: [{
-				id: "229587C05F825B0D"
-				type: "item"
-				item: "create:cogwheel"
+				id: "43B46986A987BCDB"
+				type: "checkmark"
 			}]
 			rewards: [{
 				id: "4AA3F5786473671C"
 				type: "item"
+				team_reward: false
 				item: "create:cogwheel"
 				count: 3
 			}]
 		}
 		{
 			title: "Content Overview"
+			icon: {
+				id: "occultism:book_of_calling_foliot_cleaner"
+				Count: 1b
+				tag: {
+					spiritName: "Krredder"
+				}
+			}
 			x: 0.0d
 			y: 4.5d
 			description: [
@@ -312,19 +329,13 @@
 			size: 1.5d
 			id: "1E8052CB531F278B"
 			tasks: [{
-				id: "1C221652750B1BAC"
-				type: "item"
-				item: {
-					id: "occultism:book_of_calling_foliot_cleaner"
-					Count: 1b
-					tag: {
-						spiritName: "Madmiarc"
-					}
-				}
+				id: "1448FB5D16785C8A"
+				type: "checkmark"
 			}]
 			rewards: [{
 				id: "137712A52617E5B3"
 				type: "item"
+				team_reward: false
 				item: "minecraft:writable_book"
 			}]
 		}
@@ -338,15 +349,21 @@
 			dependencies: ["1E8052CB531F278B"]
 			size: 2.0d
 			id: "64F3352725385210"
+			tasks: [{
+				id: "22E9E0C00395673B"
+				type: "checkmark"
+			}]
 			rewards: [
 				{
 					id: "1BCA53C3EC4CC09C"
 					type: "item"
+					team_reward: false
 					item: "create:goggles"
 				}
 				{
 					id: "40C039DDFFD080E4"
 					type: "item"
+					team_reward: false
 					item: "thermal:silver_coin"
 					count: 3
 					random_bonus: 2

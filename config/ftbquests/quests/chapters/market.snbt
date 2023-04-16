@@ -475,6 +475,7 @@
 				type: "item"
 				item: "thermal:gold_coin"
 				count: 3L
+				consume_items: true
 			}]
 			rewards: [
 				{
