@@ -59,7 +59,7 @@
 			title: "Explosivity 100"
 			icon: "minecraft:gunpowder"
 			x: -0.5d
-			y: 4.5d
+			y: 4.0d
 			description: ["Oldest volatile compound known, it can be used for a variety of purposes."]
 			dependencies: [
 				"4C99F5F60ABE2DFD"
@@ -129,7 +129,7 @@
 			title: "Packing the Desert"
 			icon: "minecraft:sandstone"
 			x: 2.5d
-			y: 2.0d
+			y: 2.5d
 			description: ["Packing it somehow creates niter from thin air."]
 			dependencies: ["631E60CEDA707586"]
 			id: "03A6353EE55D277A"
@@ -154,7 +154,10 @@
 			y: 1.5d
 			description: ["Every good factory depends on a bit of water."]
 			hide_dependency_lines: true
-			dependencies: ["278B95FF7159DCFC"]
+			dependencies: [
+				"278B95FF7159DCFC"
+				"1FBABF8567497CDB"
+			]
 			id: "74A84A8909F67276"
 			tasks: [
 				{
@@ -177,7 +180,10 @@
 			y: -0.5d
 			description: ["At this point you should already have a formidable wood farm, direct some of it to this line."]
 			hide_dependency_lines: true
-			dependencies: ["278B95FF7159DCFC"]
+			dependencies: [
+				"278B95FF7159DCFC"
+				"1FBABF8567497CDB"
+			]
 			id: "463701D5CEC99FC8"
 			tasks: [
 				{
@@ -208,7 +214,10 @@
 			y: -0.5d
 			description: ["Cobblestone production is now much easier with zinc machinery."]
 			hide_dependency_lines: true
-			dependencies: ["278B95FF7159DCFC"]
+			dependencies: [
+				"278B95FF7159DCFC"
+				"1FBABF8567497CDB"
+			]
 			id: "0A39053F99978A28"
 			tasks: [
 				{
@@ -283,7 +292,10 @@
 			y: 2.0d
 			description: ["You got many options, choose your favorite."]
 			hide_dependency_lines: true
-			dependencies: ["278B95FF7159DCFC"]
+			dependencies: [
+				"278B95FF7159DCFC"
+				"1FBABF8567497CDB"
+			]
 			id: "471B54AB5206E0F3"
 			tasks: [
 				{
@@ -345,7 +357,7 @@
 			title: "Nitric"
 			icon: "thermal:niter"
 			x: 1.5d
-			y: 3.5d
+			y: 4.0d
 			description: ["Here you got the niter"]
 			dependencies: ["03A6353EE55D277A"]
 			id: "123439484762E75A"
@@ -901,6 +913,7 @@
 		}
 		{
 			title: "Ferrically"
+			icon: "minecraft:iron_nugget"
 			x: 5.0d
 			y: 3.5d
 			dependencies: ["218397419487B197"]
@@ -928,7 +941,7 @@
 				}
 			}
 			x: 3.0d
-			y: 4.5d
+			y: 5.0d
 			description: ["Route the nuggets once more into your High-Temperature melting equipment. A Melter from Tinkers' Construct, for example."]
 			dependencies: ["65605AC13DF2D359"]
 			id: "3F0207FF17AA3496"
@@ -963,7 +976,7 @@
 				}
 			}
 			x: 1.0d
-			y: 6.0d
+			y: 6.5d
 			description: ["Mix it up with carbon and that will create steel, the essential alloy of this chapter."]
 			dependencies: [
 				"4C99F5F60ABE2DFD"
@@ -990,6 +1003,23 @@
 					title: "Automated"
 				}
 			]
+		}
+		{
+			title: "Warning"
+			icon: "createdeco:orange_decal"
+			x: -3.0d
+			y: -3.0d
+			shape: "square"
+			subtitle: "Placeholder Questline"
+			description: ["This is a placeholder questline, as of 1.2 it will be fully redone"]
+			dependencies: ["278B95FF7159DCFC"]
+			size: 2.0d
+			id: "1FBABF8567497CDB"
+			tasks: [{
+				id: "4441EEA6069352B4"
+				type: "checkmark"
+				title: "Acknowleged"
+			}]
 		}
 	]
 	quest_links: [ ]

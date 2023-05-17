@@ -407,7 +407,7 @@
 			tasks: [{
 				id: "3BDB6D2A6AC3776E"
 				type: "stat"
-				title: "Complete Secondary 2B"
+				title: "Complete Bonus 2B"
 				icon: "kubejs:train_mechanism"
 				stat: "minecraft:play_time"
 				value: 1
@@ -429,7 +429,7 @@
 			tasks: [{
 				id: "721CBD4B8CECEBF9"
 				type: "checkmark"
-				title: "Unlock Secondary 2B"
+				title: "Unlock Bonus 2B"
 			}]
 		}
 		{

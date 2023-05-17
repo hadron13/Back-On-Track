@@ -179,103 +179,6 @@ onEvent('item.tags', event => {
 	remove_metal('davebuildingmod:steel_ingot', 'davebuildingmod:steel_block', '', 'steel')
 	remove_metal('beyond_earth:steel_ingot', 'beyond_earth:steel_block', 'beyond_earth:steel_nugget', 'steel')
 
-
-
-
-	event.get("forge:treasure1")
-		.add(MC('cobweb'))
-		.add(MC('dandelion'))
-		.add(MC('poppy'))
-		.add(MC('jungle_sapling'))
-		.add(MC('brown_mushroom'))
-		.add(MC('red_mushroom'))
-		.add(MC('bamboo'))
-		.add(MC('ladder'))
-		.add(MC('chain'))
-		.add(MC('flower_pot'))
-		.add(MC('painting'))
-		.add(MC('iron_nugget'))
-		.add(MC('gold_nugget'))
-		.add(CR('copper_nugget'))
-		.add(CR('zinc_nugget'))
-		.add(MC('charcoal'))
-		.add(MC('rotten_flesh'))
-		.add(MC('pumpkin_seeds'))
-		.add(MC('melon_seeds'))
-		.add(MC('bone_meal'))
-		.add(MC('paper'))
-		.add(FD('raw_pasta'))
-		.add(AP('algal_blend'))
-		.add(FD('tree_bark'))
-		.add(CR('cogwheel'))
-		.add(TE('rubber'))
-		.add(CR('andesite_alloy'))
-		.add(MC('poisonous_potato'))
-
-	event.get("forge:treasure2")
-		.add(MC('lantern'))
-		.add(MC('redstone'))
-		.add(MC('bow'))
-		.add(FD('rice'))
-		.add(SP('copper_lantern'))
-		.add(SP('brass_lantern'))
-		.add(SP('sconce'))
-		.add(SP('rope_arrow'))
-		.add(SP('slingshot'))
-		.add(SP('flax_seeds'))
-		.add(SP('bomb'))
-		.add(FD('sweet_berry_cookie'))
-		.add(FD('cabbage_seeds'))
-		.add(FD('tomato_seeds'))
-		.add(MC('scute'))
-		.add(MC('iron_ingot'))
-		.add(MC('copper_ingot'))
-		.add(CR('zinc_ingot'))
-		.add(TE('rosin'))
-		.add(MC('spider_eye'))
-		.add(MC('nether_brick'))
-		.add(MC('beetroot_seeds'))
-		.add(MC('book'))
-		.add(MC('name_tag'))
-		.add(FD('rope'))
-		.add(CR('cinder_flour'))
-		.add(TC('seared_brick'))
-		.add(FD('canvas'))
-		.add(TE('cinnabar'))
-		.add(TE('sulfur'))
-		.add(TE('niter'))
-		.add(MC('compass'))
-		.add(MC('experience_bottle'))
-		.add(MC('golden_carrot'))
-		// .add('antiqueatlas:empty_antique_atlas')
-
-	event.get("forge:treasure3")
-		.add(MC('skeleton_skull'))
-		.add(MC('clock'))
-		.add(MC('diamond'))
-		.add(MC('lapis_lazuli'))
-		.add(MC('zombie_head'))
-		.add(CR('rose_quartz'))
-		.add(CR('brass_hand'))
-		.add(MC('saddle'))
-		.add(AE2('certus_quartz_crystal'))
-		.add(AE2('fluix_crystal'))
-		.add(TE('ice_charge'))
-		.add(TE('lightning_charge'))
-		.add(TE('earth_charge'))
-		// .add(PR_C('red_ingot'))
-		.add(TE('sapphire'))
-		.add(CR('peculiar_bell'))
-		.add(MC('spectral_arrow'))
-		.add(MC('gold_ingot'))
-		.add(MC('magma_cream'))
-		.add(MC('ghast_tear'))
-		.add(MC('quartz'))
-		.add(MC('prismarine_shard'))
-		.add(MC('prismarine_crystals'))
-		.add(MC('chorus_fruit'))
-		.add(MC('blaze_powder'))
-
 })
 
 onEvent('fluid.tags', event => {
@@ -380,7 +283,10 @@ function unwantedRecipes(event) {
 	event.remove({ id: AP('smelting/charcoal_block_from_logs_that_burn_smoking') })
 	event.remove({ id: 'portality:generator' })
 	event.remove({ mod: 'pipez' })
-
+    event.remove({ id: TC('smeltery/melting/metals/gold/dust')}) 
+    event.remove({ id: TC('smeltery/melting/metals/zinc/dust')}) 
+    event.remove({ id: TC('smeltery/melting/metals/iron/dust')}) 
+    event.remove({ id: TC('smeltery/melting/metals/iron/dust')}) 
 	event.remove({ input: TE('signalum_dust'), output: TE('signalum_ingot') })
 	event.remove({ output: TE('signalum_dust'), input: TE('signalum_ingot') })
 	event.remove({ output: TE('lightning_charge') })
@@ -406,6 +312,7 @@ function unwantedRecipes(event) {
 		event.remove({ type: MC("smelting"), input: F("#dusts/" + e) })
 		event.remove({ type: MC("blasting"), input: F("#dusts/" + e) })
 		event.remove({ type: TC("melting"), input: F("#dusts/" + e) })
+        event.remove({ id: TC('smeltery/melting/metals/' + e +'/dust')}) 
 	})
 
 }
@@ -2067,18 +1974,18 @@ function zincMachine(event) {
 	donutCraft(event, TC('foundry_controller'), TC('scorched_bricks'), KJ('scorch_mechanism'))
 
 	event.recipes.createMixing(Fluid.of(TC("blood"), 1000), [MC('twisting_vines',1), MC('weeping_vines',3)]).heated()
-
-
+    
+    
 	//
 
 	let t = KJ('incomplete_scorch_mechanism')
 	event.recipes.createSequencedAssembly([
 		KJ('scorch_mechanism'),
 	], CR('precision_mechanism'), [
-		event.recipes.createFilling(t, [t, Fluid.of(TC("liquid_soul"), 500)]),
+        event.recipes.createDeploying(t, [t, TC("scorched_brick")]),
+        event.recipes.createDeploying(t, [t, TC("scorched_brick")]),
 		event.recipes.createFilling(t, [t, Fluid.of(MC("lava"), 1000)]),
 		event.recipes.createFilling(t, [t, Fluid.of(MC("lava"), 1000)]),
-		event.recipes.createFilling(t, [t, Fluid.of(MC("lava"), 1000)])
 	]).transitionalItem(t)
 		.loops(1)
 		.id('kubejs:scorch_mechanism')
@@ -2124,6 +2031,19 @@ function explosiveMachine(event){
 	event.recipes.createSequencedAssembly([
 		KJ('explosive_mechanism'),
 	], CR('precision_mechanism'), [
+		event.recipes.createDeploying(t, [t, BC("packed_gunpowder")]),
+		event.recipes.createDeploying(t, [t, BC("packed_gunpowder")]),
+		event.recipes.createFilling(t, [t, Fluid.of(BC("molten_steel"), 100)]),
+		event.recipes.createDeploying(t, [t, TE("iron_gear")]),
+		event.recipes.createPressing(t, t)
+	]).transitionalItem(t)
+		.loops(1)
+		//.id('kubejs:explosive_mechanism')
+    /*
+	let t = KJ('incomplete_explosive_mechanism')
+	event.recipes.createSequencedAssembly([
+		KJ('explosive_mechanism'),
+	], CR('precision_mechanism'), [
 		event.recipes.createFilling  (t, [t, Fluid.of('createbigcannons:molten_steel', 100)]),
 		event.recipes.createPressing (t, t),
 		event.recipes.createDeploying(t, [t, BC("packed_gunpowder")]),
@@ -2132,7 +2052,7 @@ function explosiveMachine(event){
 	]).transitionalItem(t)
 		.loops(1)
 		.id('kubejs:explosive_mechanism')
-
+*/
 		
 	event.shaped(KJ('explosive_machine'), [
 			'SSS',

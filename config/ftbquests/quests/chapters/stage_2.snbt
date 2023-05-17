@@ -42,8 +42,8 @@
 					fluid: "tconstruct:molten_iron"
 				}
 			}
-			x: 5.5d
-			y: 6.0d
+			x: 3.5d
+			y: 5.5d
 			subtitle: "Contraption 15-4"
 			description: ["Route the nuggets into your High-Temperature melting equipment. A Melter from Tinkers' Construct, for example."]
 			dependencies: ["53735DC4231AB566"]
@@ -214,8 +214,8 @@
 		{
 			title: "Ferric Traces"
 			icon: "minecraft:iron_nugget"
-			x: 6.5d
-			y: 4.5d
+			x: 4.5d
+			y: 4.0d
 			subtitle: "Contraption 15-3"
 			description: ["Washing the Gravel with an Encased Fan leaves you with Iron Nuggets and Flint."]
 			dependencies: ["1139F2E4E6FCFE29"]
@@ -259,13 +259,12 @@
 		{
 			title: "Heated Treatment"
 			icon: "kubejs:scorch_mechanism"
-			x: -1.5d
-			y: 15.5d
+			x: -2.0d
+			y: 16.5d
 			shape: "circle"
-			subtitle: "Contraption 18-2"
 			dependencies: [
-				"239C64263B91350D"
 				"1D9D65FBD06DD481"
+				"0000E832CD021088"
 			]
 			dependency_requirement: "one_completed"
 			id: "3C50B4556375178E"
@@ -280,12 +279,8 @@
 			title: "A lot. of lava"
 			icon: "minecraft:lava_bucket"
 			x: 0.0d
-			y: 14.5d
-			subtitle: "Contraption 18-1"
-			description: [
-				""
-				"Every Zinc Machine and Train Machine will end up using 24 and 16 Buckets of Lava respectively. It's not a great ecological footprint, but even just one Hose Pulley can make quick work of it."
-			]
+			y: 15.0d
+			description: ["About 2,2 buckets for every scorch mechanism, 18 buckets for a machine, not that ecological but still a hose pulley or even a few hellbarks can handle it."]
 			hide_dependency_lines: true
 			dependencies: [
 				"19715EBCBBA1B4AD"
@@ -308,12 +303,11 @@
 			]
 		}
 		{
-			title: "Soul Distillery"
-			icon: "tconstruct:liquid_soul_bucket"
-			x: -1.5d
-			y: 14.0d
-			subtitle: "Contraption 17-3"
-			description: ["Drop all the harvested vines into a Heated Mixing Basin."]
+			title: "Soup"
+			icon: "tconstruct:blood_bucket"
+			x: -2.0d
+			y: 13.0d
+			description: ["Drop everything into a heated basin and mix it all up to get the blood."]
 			dependencies: [
 				"223BB57AD0239511"
 				"7E59B7DC239E621E"
@@ -324,7 +318,7 @@
 				{
 					id: "7BBC2AAED0A77FDC"
 					type: "item"
-					item: "tconstruct:liquid_soul_bucket"
+					item: "tconstruct:blood_bucket"
 					consume_items: false
 				}
 				{
@@ -337,9 +331,8 @@
 		{
 			title: "The Double Decker I"
 			icon: "minecraft:twisting_vines"
-			x: -2.5d
-			y: 13.0d
-			subtitle: "Contraption 17-1"
+			x: -3.0d
+			y: 12.5d
 			description: [
 				"For the all-mighty Infernal Mechanism, a bountiful source of soul essence is needed. Thankfully, the vines of the underworld seem to carry it in them."
 				""
@@ -369,9 +362,8 @@
 		{
 			title: "The Double Decker II"
 			icon: "minecraft:weeping_vines"
-			x: -0.5d
-			y: 13.0d
-			subtitle: "Contraption 17-2"
+			x: -1.0d
+			y: 12.5d
 			description: [
 				"Weeping Vines grow downwards from a ceiling. You can gather them with Mechanical Harvesters."
 				""
@@ -426,7 +418,7 @@
 		{
 			title: "Chapter 2A Complete!"
 			x: -2.0d
-			y: 17.5d
+			y: 18.0d
 			shape: "hexagon"
 			description: ["Fantastic Work! You have mastered the challenges of the nether; you couldn't be more well-prepared for the upcoming Assembly Line."]
 			dependencies: ["3C50B4556375178E"]
@@ -485,10 +477,10 @@
 		}
 		{
 			title: "Blaze Escort"
-			x: -3.0d
-			y: 14.5d
+			x: -0.5d
+			y: 14.0d
 			shape: "circle"
-			description: ["For the first time in the progression, a Blaze Burner is required. Obtain them by using Empty Blaze Burners on Blazes or their Spawners."]
+			description: ["This recipe requires you to have a blaze burner under the basin, before anything else go to the nether capture one if you didn't get a burner yet."]
 			hide_dependency_lines: true
 			dependencies: [
 				"19715EBCBBA1B4AD"
@@ -961,7 +953,7 @@
 		{
 			title: "Chapter 2B Complete!"
 			x: 2.0d
-			y: 17.5d
+			y: 18.0d
 			shape: "hexagon"
 			description: ["Great! Now localized resources such as skystone can be transported to anywhere really fast."]
 			dependencies: ["0B2683CCC179B93F"]
@@ -998,7 +990,7 @@
 			title: "Sturdy Reinforcement"
 			icon: "kubejs:train_mechanism"
 			x: 1.5d
-			y: 15.5d
+			y: 16.0d
 			description: ["Combining copper and brass machinery and then reinforcing it with sturdy sheets unlocks a whole new branch of technology allowing fast and cheap long range transportation of items, fluids, and even people."]
 			dependencies: ["5BC9DD08C47121C0"]
 			id: "0B2683CCC179B93F"
@@ -1020,7 +1012,7 @@
 			title: "Sturdying"
 			icon: "create:sturdy_sheet"
 			x: 3.0d
-			y: 15.0d
+			y: 15.5d
 			description: ["Pouring lava in obsidian powder and pressing it makes an incredibly sturdy sheet for use in trains."]
 			dependencies: [
 				"7CD3D075A2C03DD2"
@@ -1045,7 +1037,7 @@
 			title: "Crushing Looper"
 			icon: "create:powdered_obsidian"
 			x: 1.5d
-			y: 14.0d
+			y: 14.5d
 			description: ["Crushing obsidian into powder requires a loop to fully grind the obsidian."]
 			dependencies: ["043E8CE4F784E8F0"]
 			id: "7CD3D075A2C03DD2"
@@ -1067,7 +1059,7 @@
 			title: "Ingeously Vitreous"
 			icon: "minecraft:obsidian"
 			x: 3.0d
-			y: 13.0d
+			y: 13.5d
 			description: [
 				"To create enough sturdy material for trains a good source of obsidian is a must."
 				""
@@ -1093,7 +1085,7 @@
 		{
 			title: "A bit less. of lava"
 			x: 4.0d
-			y: 14.0d
+			y: 14.5d
 			dependencies: ["57EF36B592C45D2C"]
 			hide: true
 			id: "070EDAC9772994A6"
@@ -1212,7 +1204,7 @@
 		}
 		{
 			title: "Vitrified"
-			x: 3.0d
+			x: 6.5d
 			y: 6.0d
 			description: ["Just smelt the sand with a fan or whatever to turn it into it's vitreous form."]
 			dependencies: ["3549968EE4EE3459"]
@@ -1225,8 +1217,8 @@
 		}
 		{
 			title: "Temporary Sand"
-			x: 3.0d
-			y: 4.5d
+			x: 7.5d
+			y: 4.0d
 			description: ["Here's the thing: you need brass machinery for fully automatic sand, but you need sand for brass machinery, so... you'll have to gather some sand yourself or grab some water strainers for now."]
 			hide_dependency_lines: true
 			dependencies: ["727B43FD95C4A512"]
@@ -1235,6 +1227,67 @@
 				id: "1B95F129E9BF84EF"
 				type: "item"
 				item: "minecraft:sand"
+			}]
+		}
+		{
+			x: -2.0d
+			y: 14.5d
+			description: ["A bit of lava into blood and it turns into magma cream."]
+			dependencies: [
+				"1D9D65FBD06DD481"
+				"239C64263B91350D"
+			]
+			id: "7360A4DC001E1F2E"
+			tasks: [{
+				id: "772DBECF26AF749D"
+				type: "item"
+				item: "minecraft:magma_cream"
+			}]
+		}
+		{
+			x: -4.0d
+			y: 15.0d
+			description: ["Mix the ingredients together and then bake the ca.. grout and your c... bricks are ready to go."]
+			dependencies: [
+				"13B31D26E76C218E"
+				"463EABB3B154A263"
+				"7360A4DC001E1F2E"
+			]
+			id: "0000E832CD021088"
+			tasks: [{
+				id: "07F984E474F79DC4"
+				type: "item"
+				item: "tconstruct:scorched_brick"
+			}]
+		}
+		{
+			x: -2.0d
+			y: 15.5d
+			description: ["Don't forget the gravel, it can give a nice texture to the cak... grout."]
+			dependencies: ["21753CBB528EAADF"]
+			id: "463EABB3B154A263"
+			tasks: [{
+				id: "028BD0B94DEF4288"
+				type: "item"
+				item: "minecraft:gravel"
+			}]
+		}
+		{
+			x: -3.5d
+			y: 14.0d
+			description: [
+				"The soul part is very important for the cak... I mean grout."
+				""
+				"Curse sand with a soul fire in front of a fan to add the soul part of soul sand."
+				""
+				"Remember with brass machinery you got infinite sand through crushing wheels."
+			]
+			dependencies: ["21753CBB528EAADF"]
+			id: "13B31D26E76C218E"
+			tasks: [{
+				id: "5FF7362FBE270E19"
+				type: "item"
+				item: "minecraft:soul_sand"
 			}]
 		}
 	]
